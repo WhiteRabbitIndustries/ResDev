@@ -16,7 +16,7 @@
 # MIT license, all text above must be included in any redistribution.
 # See 'COPYING' file for additional notes.
 # --------------------------------------------------------------------------
-
+import PIL
 from PIL import Image
 import sys
 
@@ -26,7 +26,7 @@ import sys
 # These you can edit to match your build:
 batterySize    = 150  # Battery capacity, in milliamp-hours (mAh)
 runTime        = 1.1  # Est. max run time, in hours (longer = dimmer LEDs)
-parallelStrips = 2    # Same data is issued to this many LED strips
+parallelStrips = 1    # Same data is issued to this many LED strips
 
 # These probably don't need editing:
 mcuCurrent     = 20   # Est. current used by microcontrolled board (mA)
