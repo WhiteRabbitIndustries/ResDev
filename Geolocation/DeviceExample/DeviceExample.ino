@@ -19,9 +19,22 @@ SoftwareSerial ss(RXPin, TXPin);
 uint32_t timer = millis();
 
 #define PMTK_SET_NMEA_OUTPUT_RMCGGA "$PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*28"
+
+// different commands to set the update rate from once a second (1 Hz) to 10 times a second (10Hz)
+// Note that these only control the rate at which the position is echoed, to actually speed up the
+// position fix you must also send one of the position fix rate commands below too.
+#define PMTK_SET_NMEA_UPDATE_100_MILLIHERTZ  "$PMTK220,10000*2F" // Once every 10 seconds, 100 millihertz.
+#define PMTK_SET_NMEA_UPDATE_200_MILLIHERTZ  "$PMTK220,5000*1B"  // Once every 5 seconds, 200 millihertz.
 #define PMTK_SET_NMEA_UPDATE_1HZ  "$PMTK220,1000*1F"
+#define PMTK_SET_NMEA_UPDATE_5HZ  "$PMTK220,200*2C"
 #define PMTK_SET_NMEA_UPDATE_10HZ "$PMTK220,100*2F"
+// Position fix update rate commands.
+#define PMTK_API_SET_FIX_CTL_100_MILLIHERTZ  "$PMTK300,10000,0,0,0,0*2C" // Once every 10 seconds, 100 millihertz.
+#define PMTK_API_SET_FIX_CTL_200_MILLIHERTZ  "$PMTK300,5000,0,0,0,0*18"  // Once every 5 seconds, 200 millihertz.
+#define PMTK_API_SET_FIX_CTL_1HZ  "$PMTK300,1000,0,0,0,0*1C"
 #define PMTK_API_SET_FIX_CTL_5HZ  "$PMTK300,200,0,0,0,0*2F"
+// Can't fix position faster than 5 times a second!
+
 
 void setup()
 {
@@ -32,8 +45,8 @@ void setup()
   ss.begin(GPSBaud);
   // set gps properties:
   ss.write(PMTK_SET_NMEA_OUTPUT_RMCGGA);
-  ss.write(PMTK_SET_NMEA_UPDATE_10HZ);
-  ss.write(PMTK_API_SET_FIX_CTL_5HZ);
+  ss.write(PMTK_SET_NMEA_UPDATE_1HZ);
+  ss.write(PMTK_API_SET_FIX_CTL_1HZ);
   
   Serial.begin(115200);
   Serial.println(F("WunderKammerWien"));
@@ -81,14 +94,19 @@ void loop()
 
 
   // This sketch displays information every time a new sentence is correctly encoded.
+  
   while (ss.available() > 0)
+  {
+    //displayInfo();
     if (gps.encode(ss.read()) && gps.location.isValid())
+    {
       calcDist();
+      displayInfo();
+    }
+      }
+      
     //else
       
-Serial.print(gps.satellites.value()); // Number of satellites in use (u32)
-Serial.print("  "); // Number of satellites in use (u32)
-Serial.println(gps.hdop.value()); // Horizontal Dim. of Precision (100ths-i32)
 
   //Serial.print(distanceM);
   //Serial.print("  ");
@@ -112,8 +130,8 @@ Serial.println(gps.hdop.value()); // Horizontal Dim. of Precision (100ths-i32)
   else if (distanceM <= 80 && distanceM >= 5)
   {
     bpm = map(distanceM, 5, 80, 180, 30);
-    Serial.print(bpm);
-    Serial.print("  ");
+    //Serial.print(bpm);
+    //Serial.print("  ");
 
 
     // blinks
@@ -148,24 +166,28 @@ Serial.println(gps.hdop.value()); // Horizontal Dim. of Precision (100ths-i32)
 
 void calcDist()
 {
-
+  
+  
   for (int i=0;i<LOCNUM;)
   {
   double distanceG = sqrt( sq(targetLat[i] - gps.location.lat()) + sq(targetLon[i] - gps.location.lng()) );
   double tempDistanceM = distanceG / 0.00001;
   Serial.print(i);
-  Serial.print(": ");
+  Serial.print(":");
   Serial.print(tempDistanceM);
   Serial.print("  ");
+  
   if(tempDistanceM>100) i++;
   else 
   {
+    
     distanceM = tempDistanceM;
-    Serial.println();
+    
     Serial.print("in border with ");
     Serial.print(i);
     Serial.print(". selecting disM with: ");
     Serial.print(distanceM);
+    Serial.println();
     return;
   }
   
@@ -173,8 +195,8 @@ void calcDist()
   //Serial.print(distanceG);
   //Serial.print("  ");
   //distanceM = ;
-  Serial.println();
-  displayInfo();
+  
+  
 
 
 }
@@ -227,6 +249,10 @@ void displayInfo()
   {
     Serial.print(F("INVALID"));
   }
+
+  Serial.print(gps.satellites.value()); // Number of satellites in use (u32)
+Serial.print("  "); // Number of satellites in use (u32)
+Serial.print(gps.hdop.value()); // Horizontal Dim. of Precision (100ths-i32)
 
   Serial.println();
 }
