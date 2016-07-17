@@ -6,6 +6,19 @@
         
         <gpsX>48.200873</gpsX>
         <gpsY>16.372836</gpsY>
+
+        <wifi>
+            <AP>
+                <address>D4:D1:84:73:D4:82</address>
+                <quality>50</quality>
+            </AP>
+            <!--
+            <AP>
+                <address>C4:EA:1D:A5:62:0B</address>
+                <quality>40</quality>
+            </AP>
+            -->
+        </wifi>
         
         <!--
         <gpsX>48.224579</gpsX>
@@ -60,6 +73,16 @@
         <name>Hotel Sacher / Cafe Mozart</name>
         <gpsX>48.204219</gpsX>
         <gpsY>16.369389</gpsY>
+        <wifi>
+            <AP>
+                <address>D4:D1:84:73:D4:82</address>
+                <quality>100</quality>
+            </AP>
+            <AP>
+                <address>C4:EA:1D:A5:62:0B</address>
+                <quality>100</quality>
+            </AP>
+        </wifi>
         <LED></LED>
         <radius>30</radius>
         <state>
@@ -76,6 +99,16 @@
         <name>Oper / Opernbrunnen</name>
         <gpsX>48.202854</gpsX>
         <gpsY>16.369616</gpsY>
+        <wifi>
+            <AP>
+                <address>D4:D1:84:73:D4:82</address>
+                <quality>100</quality>
+            </AP>
+            <AP>
+                <address>C4:EA:1D:A5:62:0B</address>
+                <quality>100</quality>
+            </AP>
+        </wifi>
         <LED></LED>
         <radius>30</radius>
         <state>
@@ -92,6 +125,16 @@
         <name>Resselpark Statue</name>
         <gpsX>48.199394</gpsX>
         <gpsY>16.370150</gpsY>
+        <wifi>
+            <AP>
+                <address>D4:D1:84:73:D4:82</address>
+                <quality>100</quality>
+            </AP>
+            <AP>
+                <address>C4:EA:1D:A5:62:0B</address>
+                <quality>100</quality>
+            </AP>
+        </wifi>
         <LED></LED>
         <radius>30</radius>
         <state>
@@ -114,6 +157,16 @@
         <name>Ecke Paniglgasse / TU</name>
         <gpsX>48.197798</gpsX>
         <gpsY>16.370370</gpsY>
+        <wifi>
+            <AP>
+                <address>D4:D1:84:73:D4:82</address>
+                <quality>100</quality>
+            </AP>
+            <AP>
+                <address>C4:EA:1D:A5:62:0B</address>
+                <quality>100</quality>
+            </AP>
+        </wifi>
         <LED></LED>
         <radius>30</radius>
         

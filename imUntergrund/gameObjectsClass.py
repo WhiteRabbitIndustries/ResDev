@@ -14,8 +14,14 @@ class GameData:
 			id = int(location.find('id').text)
 			name = location.find('name').text
 			coord = {'x': float(location.find('gpsX').text), 'y': float(location.find('gpsY').text)}
+
+			wifiAPs = []
+			for AP in location.find('wifi').findall('AP'):
+				wifiAPs.append({'address': AP.find('address').text,'quality': int(AP.find('quality').text)})
+			
+
 			radius = int(location.find('radius').text)        
-			self.locationList.append(GameLocation(id,name,coord,radius,location))
+			self.locationList.append(GameLocation(id,name,coord,wifiAPs,radius,location))
 			self.locationCount+=1
 
 		#self.currentLocation = 1
@@ -26,10 +32,11 @@ class GameData:
 		pass
 
 class GameLocation:
-	def __init__(self,id,name,coord,radius,location):
+	def __init__(self,id,name,coord,wifiAPs,radius,location):
 		self.id = id
 		self.name = name
 		self.coord = coord
+		self.wifiAPs = wifiAPs
 		self.radius = radius
 
 		#location conditions:

@@ -56,15 +56,25 @@ try:
       distance = 0.0
       if gameData.locationList[x].active == True:
 
-        #calc distance
+        #calc distance based on gps
         distance = float(math.sqrt((gameData.locationList[x].coord['x'] - currentCoord['x'])**2 + (gameData.locationList[x].coord['y'] - currentCoord['y'])**2))
         distance = distance / 0.00001; #translate to meters
         print "Distance to %s is %d." % (gameData.locationList[x].name, distance)
 
-        #calc on location
-        signalStrength = wifip.checkWifi('34:62:88:0F:DB:31')
-        print signalStrength
-        if (distance<gameData.locationList[x].radius) | (signalStrength!=None):
+        #calc in bound based on wifi ap signals
+        inBoundWifi = False
+        #print len(gameData.locationList[x].wifiAPs)
+
+        # get wifi aps for the location, then check if they are in bound
+        for a in xrange(0,len(gameData.locationList[x].wifiAPs)):
+          #print "in scan", a
+
+          inBoundWifi = inBoundWifi or wifip.inWifiRange(gameData.locationList[x].wifiAPs[a]['address'],gameData.locationList[x].wifiAPs[a]['quality'])
+          
+        print inBoundWifi
+
+
+        if (distance<gameData.locationList[x].radius) | inBoundWifi :
           # location check in: enter initial state, update prereq of other locaitons/states
           print "onlocation"
           #print "wifi strength: %d" % signalStrength
@@ -134,9 +144,11 @@ while pygame.mixer.music.get_busy() == True:
     
 
 except(KeyboardInterrupt, SystemExit):
-  print "\nKilling Thread.."
+  print "\nKilling Threads.."
   gpsp.running = False 
   gpsp.join()
+  wifip.running = False 
+  wifip.join()
 
 print "Done.\nExiting."
 

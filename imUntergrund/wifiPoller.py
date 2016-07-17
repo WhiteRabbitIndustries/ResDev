@@ -9,83 +9,15 @@ interface = "wlan0"
 
 class wifiPoller(threading.Thread):
 
-  # Below here goes the boring stuff. You shouldn't have to edit anything below
-  # this point
-
-  def matching_line(self,lines, keyword):
-      """Returns the first matching line in a list of lines. See match()"""
-      for line in lines:
-          matching=match(line,keyword)
-          if matching!=None:
-              return matching
-      return None
-
-  def match(self,line,keyword):
-      """If the first part of line (modulo blanks) matches keyword,
-      returns the end of that line. Otherwise returns None"""
-      line=line.lstrip()
-      length=len(keyword)
-      if line[:length] == keyword:
-          return line[length:]
-      else:
-          return None
-
-  def get_name(cell):
-      return self.matching_line(cell,"ESSID:")[1:-1]
-
-  def get_signal_level(cell):
-      # Signal level is on same line as Quality data so a bit of ugly
-      # hacking needed...
-      return self.matching_line(cell,"Quality=").split("Signal level=")[1]
-
-  def get_address(self,cell):
-      return self.matching_line(cell,"Address: ")
-
-  def parse_cell(self,cell):
-      """Applies the rules to the bunch of text describing a cell and returns the
-      corresponding dictionary"""
-      parsed_cell={}
-      for key in self.rules:
-          rule=self.rules[key]
-          parsed_cell.update({key:rule(cell)})
-      return parsed_cell
-      
-  # Here's a dictionary of rules that will be applied to the description of each
-  # cell. The key will be the name of the column in the table. The value is a
-  # function defined above.
-
-  rules={"Name":get_name,
-         #"Quality":get_quality,
-         # "Channel":get_channel,
-         # "Encryption":get_encryption,
-         "Address":get_address,
-         "Signal":get_signal_level
-         }
-
-  # Here you can choose the way of sorting the table. sortby should be a key of
-  # the dictionary rules.
-
-  # def sort_cells(cells):
-  #     sortby = "Quality"
-  #     reverse = True
-  #     cells.sort(None, lambda el:el[sortby], reverse)
-
-  # You can choose which columns to display here, and most importantly in what order. Of
-  # course, they must exist as keys in the dict rules.
-
-  # columns=["Name","Address","Quality","Signal", "Channel","Encryption"]
-
-
-
-
-  
+  parsed_cells=[]
+  running = True
 
   # You can add or change the functions to parse the properties of each AP (cell)
   # below. They take one argument, the bunch of text describing one cell in iwlist
   # scan and return a property of that cell.
   def __init__(self):
     threading.Thread.__init__(self)
-    self.parsed_cells=[]
+    #self.parsed_cells=[]
     self.running = True 
 
   # def print_cells(cells):
@@ -100,9 +32,6 @@ class wifiPoller(threading.Thread):
   def run(self):
     try:
       while self.running:
-        #self.current_value = self.session.next()
-        
-        """Pretty prints the output of iwlist scan into a table"""
       
         cells=[[]]
         self.parsed_cells=[]
@@ -118,29 +47,106 @@ class wifiPoller(threading.Thread):
             cells[-1].append(line.rstrip())
 
         cells=cells[1:]
+        #print cells
 
         for cell in cells:
             self.parsed_cells.append(self.parse_cell(cell))
 
+
         #sort_cells(parsed_cells)
-        print_cells(self.parsed_cells)
+        #print_cells(self.parsed_cells)
         time.sleep(1) # tune this, you might not get values that quickly
+
+
+        #self.running = false;
     except StopIteration:
       pass
 
-  def checkWifi(self, bssid):
+  def inWifiRange(self, bssid,quality):
     try:
       # scan through 
+      print bssid 
+      signalQ = None
       for cell in self.parsed_cells:
-        if get_address(cell) == bssid:
-          print get_name(cell)
-          signalStrength = int( get_signal_level(cell)[:2])
-          print signalStrength
-          return signalStrength
+        
+        if cell['Address'] == bssid:
+          print "wifi ", cell['Address'], ": ", cell['Name']," is in range. Signal Quality: ", cell['Quality'], "%"
+          signalQ = cell['Quality']
+          break
         else:
-          return 0
+          #print "not in range"
+          signalQ = 0
+
+      if(signalQ>quality):
+        return True
+      else:
+        return False
     except StopIteration:
       pass
+
+
+  def get_name(self, cell):
+      return self.matching_line(cell,"ESSID:")[1:-1]
+
+  def get_quality(self, cell):
+      quality = self.matching_line(cell,"Quality=").split()[0].split('/')
+      #return str(int(round(float(quality[0]) / float(quality[1]) * 100))).rjust(3) + " %"
+      return int(round(float(quality[0]) / float(quality[1]) * 100))
+
+  def get_address(self, cell):
+      return self.matching_line(cell,"Address: ")
+
+  def get_signal_level(self, cell):
+      # Signal level is on same line as Quality data so a bit of ugly
+      # hacking needed...
+      signalString = self.matching_line(cell,"Quality=").split("Signal level=")[1]
+      return int(signalString.split(' ')[0])
+
+
+
+
+
+
+
+
+  def parse_cell(self,cell):
+      """Applies the rules to the bunch of text describing a cell and returns the
+      corresponding dictionary"""
+      parsed_cell={}
+      parsed_cell.update({"Address":self.get_address(cell)})
+      parsed_cell.update({"Name":self.get_name(cell)})
+      parsed_cell.update({"Signal":self.get_signal_level(cell)})
+      parsed_cell.update({"Quality":self.get_quality(cell)})
+      
+      
+
+      #print parsed_cell
+      return parsed_cell
+      
+
+
+  def matching_line(self,lines, keyword):
+      """Returns the first matching line in a list of lines. See match()"""
+      for line in lines:
+          matching=self.match(line,keyword)
+          if matching!=None:
+              return matching
+      return None
+
+  def match(self,line,keyword):
+      """If the first part of line (modulo blanks) matches keyword,
+      returns the end of that line. Otherwise returns None"""
+      line=line.lstrip()
+      length=len(keyword)
+      if line[:length] == keyword:
+          return line[length:]
+      else:
+          return None
+
+
+
+  
+
 """
 
 
