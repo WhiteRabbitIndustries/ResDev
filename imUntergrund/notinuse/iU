@@ -1,0 +1,1684 @@
+1a
+Time: 2016-07-18T12:02:41.000Z Lat:  48 12' 03.323" N Lon:  16 22' 22.572" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGGA GPGSA GPRMC GPZDA GPGSV                                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      120241.000       ││Time:      120241.000       │
+│ 0  29  64 57  27 ││Latitude:     4812.0554 N   ││Latitude:  4812.0554        │
+│ 1  21 191 54  27 ││Longitude:   01622.3762 E   ││Longitude: 01622.3762       │
+│ 2  31 242 43  24 ││Speed:     0.41             ││Altitude:  116.4            │
+│ 3  26 304 41  24 ││Course:    102.82           ││Quality:   1   Sats: 04     │
+│ 4  25 133 36  16 ││Status:    A       FAA: A   ││HDOP:      1.66             │
+│ 5  20 119 26   0 ││MagVar:                     ││Geoid:     43.4             │
+│ 6   5  65 23   0 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7  16 306 12   0 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8   2  44  3   0 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  12 128  2   0 ││Sats: 25 21 29 26           ││MAJ:           MIN:         │
+│10  18 164  1   0 ││DOP: H=1.66  V=0.98  P=1.93 ││ORI:           LAT:         │
+│11  18 164  1   0 ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+
+ Time:       2016-07-18T12:04:06.000Z   ││PRN:   Elev:  Azim:  SNR:  Used: │
+│    Latitude:    48.200963 N               ││  29    57    064    28      Y   │
+│    Longitude:   16.372798 E               ││  21    55    191    29      Y   │
+│    Altitude:   116.3 m                    ││  31    42    241    21      Y   │
+│    Speed:      1.8 kph                    ││  26    41    304    28      Y   │
+│    Heading:    348.6 deg (true)           ││  25    35    134    00      N   │
+│    Climb:      0.0 m/min                  ││ 124    34    173    00      N   │
+│    Status:     3D FIX (23 secs)           ││  20    27    118    16      N   │
+│    Longitude Err:   +/- 16 m              ││   5    23    064    14      N   │
+│    Latitude Err:    +/- 31 m              ││  16    13    307    00      N   │
+│    Altitude Err:    +/- 22 m              ││   2    02    044    00      N   │
+│    Course Err:      n/a                   ││  12    02    128    00      N   │
+│    Speed Err:       +/- 228 kph           ││  18    01    164    00      N   │
+│    Time offset:     -422598.763           ││                                 │
+│    Grid Square:     JN88ee     
+
+          Cell 01 - Address: 58:B6:33:22:01:C8
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 02 - Address: 58:B6:33:22:2C:C8
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 03 - Address: 58:B6:33:21:E5:48
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 04 - Address: 64:70:02:44:98:DA
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"AlphaGuest"
+          Cell 05 - Address: 58:B6:33:22:2B:98
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 06 - Address: 2C:C5:D3:10:A4:F8
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 07 - Address: 2C:C5:D3:50:A4:F8
+                    Quality=21/70  Signal level=-89 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 08 - Address: 2C:C5:D3:90:A4:F8
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 09 - Address: 58:B6:33:22:02:D8
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 10 - Address: 2C:C5:D3:10:9F:E8
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 11 - Address: 2C:C5:D3:50:9F:E8
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 12 - Address: 2C:C5:D3:90:9F:E8
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 13 - Address: 2C:C5:D3:10:AB:B8
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 14 - Address: 2C:C5:D3:50:AB:B8
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 15 - Address: 2C:C5:D3:90:AB:B8
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 16 - Address: 58:B6:33:21:E6:68
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 17 - Address: 50:87:89:C3:17:73
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"\x00"
+          Cell 18 - Address: 58:B6:33:21:E2:A8
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 19 - Address: 2C:C5:D3:10:A6:A8
+                    Quality=39/70  Signal level=-71 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 20 - Address: 2C:C5:D3:50:A6:A8
+                    Quality=40/70  Signal level=-70 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 21 - Address: 2C:C5:D3:90:A6:A8
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 22 - Address: 2C:C5:D3:10:A7:58
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 23 - Address: 2C:C5:D3:50:A7:58
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 24 - Address: 2C:C5:D3:90:A7:58
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 25 - Address: 58:B6:33:21:E9:48
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 26 - Address: 2C:C5:D3:10:A0:18
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 27 - Address: 2C:C5:D3:50:A0:18
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 28 - Address: 2C:C5:D3:90:A0:18
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 29 - Address: 58:B6:33:21:E6:88
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 30 - Address: 58:B6:33:22:03:58
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 31 - Address: 58:B6:33:22:25:18
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"IMPERIAL"
+
+1b
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:05:48.000Z Lat:  48 11' 59.723" N Lon:  16 22' 22.632" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGSV GPRMC GPZDA GPGGA GPGSA                                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      120549.000       ││Time:      120549.000       │
+│ 0  29  65 56  15 ││Latitude:               N   ││Latitude:                   │
+│ 1  21 191 56  27 ││Longitude:              E   ││Longitude:                  │
+│ 2  26 304 42  12 ││Speed:     0.42             ││Altitude:                   │
+│ 3  31 240 42  30 ││Course:    7.7500           ││Quality:   0   Sats: 04     │
+│ 4  25 134 34  27 ││Status:    V       FAA: N   ││HDOP:                       │
+│ 5  20 118 27  34 ││MagVar:                     ││Geoid:                      │
+│ 6   5  64 23   0 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7  16 307 14   0 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8   2  44  2   0 ││Mode: A 1                   ││UTC:           RMS:         │
+│ 9  18 163  2   0 ││Sats:                       ││MAJ:           MIN:         │
+│10  12 129  1   0 ││DOP: H=      V=      P=     ││ORI:           LAT:         │
+│11 134   0  0   0 ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────
+
+          Cell 01 - Address: 58:B6:33:22:2C:C8
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 02 - Address: 58:B6:33:22:2B:98
+                    Quality=15/70  Signal level=-95 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 03 - Address: 2C:C5:D3:10:A4:F8
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 04 - Address: 2C:C5:D3:50:A4:F8
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 05 - Address: 2C:C5:D3:90:A4:F8
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 06 - Address: 2C:C5:D3:10:9F:E8
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 07 - Address: 2C:C5:D3:90:9F:E8
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 08 - Address: 2C:C5:D3:10:AB:B8
+                    Quality=21/70  Signal level=-89 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 09 - Address: 2C:C5:D3:50:AB:B8
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 10 - Address: 2C:C5:D3:90:AB:B8
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 11 - Address: 50:87:89:C3:17:73
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"\x00"
+          Cell 12 - Address: 58:B6:33:21:E2:A8
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 13 - Address: 2C:C5:D3:10:A6:A8
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 14 - Address: 2C:C5:D3:50:A6:A8
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 15 - Address: 2C:C5:D3:90:A6:A8
+                    Quality=21/70  Signal level=-89 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 16 - Address: 2C:C5:D3:10:A7:58
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 17 - Address: 2C:C5:D3:50:A7:58
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 18 - Address: 2C:C5:D3:90:A7:58
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 19 - Address: 2C:C5:D3:10:A0:18
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 20 - Address: 2C:C5:D3:50:A0:18
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 21 - Address: 2C:C5:D3:90:A0:18
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 22 - Address: 2C:C5:D3:10:A2:08
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 23 - Address: 2C:C5:D3:50:A2:08
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 24 - Address: 2C:C5:D3:90:A2:08
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 25 - Address: C4:6E:1F:B6:4D:2A
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"Rep. Francaises"
+          Cell 26 - Address: C8:3A:35:33:9A:D8
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Tenda_339AD8"
+          Cell 27 - Address: 58:B6:33:22:37:98
+                    Quality=18/70  Signal level=-92 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 28 - Address: 2C:C5:D3:10:A4:D8
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 29 - Address: 2C:C5:D3:50:A4:D8
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 30 - Address: 54:3D:37:34:36:88
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"Medientechnik"
+
+
+
+1c Middle
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:07:41.000Z Lat:  48 12' 02.868" N Lon:  16 22' 20.952" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGSV GPRMC GPZDA GPGGA GPGSA                                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      120741.000       ││Time:      120741.000       │
+│ 0  21 191 57  24 ││Latitude:     4812.0478 N   ││Latitude:  4812.0478        │
+│ 1  29  66 55  13 ││Longitude:   01622.3492 E   ││Longitude: 01622.3492       │
+│ 2  26 303 43  12 ││Speed:     1.842            ││Altitude:  94.0             │
+│ 3  31 239 41  27 ││Course:    18.760           ││Quality:   1   Sats: 05     │
+│ 4  25 134 34  18 ││Status:    A       FAA: A   ││HDOP:      1.32             │
+│ 5 124 173 34   0 ││MagVar:                     ││Geoid:     43.4             │
+│ 6  20 117 28  21 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7   5  63 23  16 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8  16 307 14   0 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  18 163  3   0 ││Sats: 5 21 29 26 25         ││MAJ:           MIN:         │
+│10   2  44  1   0 ││DOP: H=1.32  V=0.96  P=1.63 ││ORI:           LAT:         │
+│11  12 129  1   0 ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────
+
+          Cell 01 - Address: 58:B6:33:22:2B:98
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 02 - Address: 2C:C5:D3:10:9F:E8
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 03 - Address: 2C:C5:D3:90:9F:E8
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 04 - Address: 2C:C5:D3:10:AB:B8
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 05 - Address: 2C:C5:D3:50:AB:B8
+                    Quality=18/70  Signal level=-92 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 06 - Address: 2C:C5:D3:90:AB:B8
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 07 - Address: 50:87:89:C3:17:73
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"\x00"
+          Cell 08 - Address: 2C:C5:D3:10:A6:A8
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 09 - Address: 2C:C5:D3:50:A6:A8
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 10 - Address: 2C:C5:D3:90:A6:A8
+                    Quality=21/70  Signal level=-89 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 11 - Address: 2C:C5:D3:10:A7:58
+                    Quality=16/70  Signal level=-94 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 12 - Address: 2C:C5:D3:90:A7:58
+                    Quality=16/70  Signal level=-94 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 13 - Address: C4:6E:1F:B6:4D:2A
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"Rep. Francaises"
+          Cell 14 - Address: 54:3D:37:34:36:88
+                    Quality=44/70  Signal level=-66 dBm  
+                    ESSID:"Medientechnik"
+          Cell 15 - Address: 58:B6:33:22:03:98
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 16 - Address: 58:B6:33:22:01:C8
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 17 - Address: 58:B6:33:22:5D:88
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 18 - Address: 58:B6:33:22:58:E8
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 19 - Address: C8:D7:19:5D:28:89
+                    Quality=18/70  Signal level=-92 dBm  
+                    ESSID:"linksys"
+          Cell 20 - Address: 50:87:89:C3:17:70
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"BG-Guest"
+          Cell 21 - Address: 2C:C5:D3:10:A5:F8
+                    Quality=14/70  Signal level=-96 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 22 - Address: 58:B6:33:22:03:58
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 23 - Address: 50:87:89:C3:17:72
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"\x00"
+          Cell 24 - Address: 58:B6:33:22:58:C8
+                    Quality=16/70  Signal level=-94 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 25 - Address: 58:B6:33:21:E9:48
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 26 - Address: 2C:C5:D3:50:9F:E8
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 27 - Address: 58:B6:33:22:2C:38
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 28 - Address: 00:1D:2E:35:17:50
+                    Quality=15/70  Signal level=-95 dBm  
+                    ESSID:""
+          Cell 29 - Address: 58:B6:33:22:02:D8
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 30 - Address: 58:B6:33:21:E6:88
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 31 - Address: 58:B6:33:22:01:E8
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 32 - Address: D4:68:4D:1E:90:A8
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 33 - Address: 58:B6:33:21:E5:48
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 34 - Address: A0:8D:16:36:77:28
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"3WebCube7724"
+          Cell 35 - Address: 2C:C5:D3:50:A7:58
+                    Quality=16/70  Signal level=-94 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 36 - Address: D4:68:4D:5E:90:A8
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:""
+          Cell 37 - Address: 20:AA:4B:22:3F:A4
+                    Quality=15/70  Signal level=-95 dBm  
+                    ESSID:"Freewave"
+          Cell 38 - Address: 58:B6:33:21:E9:98
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 39 - Address: D4:68:4D:1E:C8:E8
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 40 - Address: D4:68:4D:5E:C8:E8
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:""
+
+
+1d
+┌──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:08:29.000Z Lat:  48 12' 02.153" N Lon:  16 22' 24.677" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGSV GPRMC GPZDA GPGGA GPGSA                                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      120829.000       ││Time:      120829.000       │
+│ 0  21 191 57  31 ││Latitude:     4812.0359 N   ││Latitude:  4812.0359        │
+│ 1  29  66 55  34 ││Longitude:   01622.4113 E   ││Longitude: 01622.4113       │
+│ 2  26 303 43  17 ││Speed:     3.242            ││Altitude:  91.6             │
+│ 3  31 239 41  20 ││Course:    135.61           ││Quality:   1   Sats: 04     │
+│ 4  25 134 33   0 ││Status:    A       FAA: A   ││HDOP:      1.63             │
+│ 5  20 117 28   0 ││MagVar:                     ││Geoid:     43.4             │
+│ 6   5  62 23  14 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7  16 307 14   0 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8  18 163  3   0 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9   2  44  1   0 ││Sats: 5 21 29 26            ││MAJ:           MIN:         │
+│10 121   0  0   0 ││DOP: H=1.63  V=0.97  P=1.90 ││ORI:           LAT:         │
+│11  12 129  1   0 ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────
+
+          Cell 01 - Address: 50:87:89:C3:17:73
+                    Quality=38/70  Signal level=-72 dBm  
+                    ESSID:"\x00"
+          Cell 02 - Address: C4:6E:1F:B6:4D:2A
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Rep. Francaises"
+          Cell 03 - Address: 54:3D:37:34:36:88
+                    Quality=38/70  Signal level=-72 dBm  
+                    ESSID:"Medientechnik"
+          Cell 04 - Address: 50:87:89:C3:17:70
+                    Quality=42/70  Signal level=-68 dBm  
+                    ESSID:"BG-Guest"
+          Cell 05 - Address: 50:87:89:C3:17:72
+                    Quality=39/70  Signal level=-71 dBm  
+                    ESSID:"\x00"
+          Cell 06 - Address: 58:B6:33:22:2C:38
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 07 - Address: 58:B6:33:21:DA:E8
+                    Quality=18/70  Signal level=-92 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 08 - Address: 64:70:02:44:98:DA
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"AlphaGuest"
+          Cell 09 - Address: EC:1F:72:B7:D5:72
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Doky1"
+          Cell 10 - Address: 58:B6:33:21:D8:08
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 11 - Address: 58:B6:33:22:37:28
+                    Quality=18/70  Signal level=-92 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 12 - Address: 54:4A:00:BF:AC:90
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"\x00"
+          Cell 13 - Address: 58:B6:33:22:25:18
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 14 - Address: 58:B6:33:22:28:A8
+                    Quality=17/70  Signal level=-93 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 15 - Address: 50:87:89:C3:17:71
+                    Quality=40/70  Signal level=-70 dBm  
+                    ESSID:"\x00"
+          Cell 16 - Address: 58:B6:33:22:24:C8
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 17 - Address: 58:B6:33:22:2E:78
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 18 - Address: 58:B6:33:21:D7:68
+                    Quality=18/70  Signal level=-92 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 19 - Address: 58:B6:33:21:E7:88
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"IMPERIAL"
+
+
+1e
+┌──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:09:46.000Z Lat:  48 12' 02.075" N Lon:  16 22' 24.425" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGSV GPRMC GPZDA GPGGA GPGSA                                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      120946.000       ││Time:      120946.000       │
+│ 0  21 191 57  30 ││Latitude:     4812.0346 N   ││Latitude:  4812.0346        │
+│ 1  29  66 55  30 ││Longitude:   01622.4071 E   ││Longitude: 01622.4071       │
+│ 2  26 303 44  38 ││Speed:     0.362            ││Altitude:  87.6             │
+│ 3  31 238 41  18 ││Course:    305.25           ││Quality:   1   Sats: 04     │
+│ 4  25 135 33  21 ││Status:    A       FAA: A   ││HDOP:      1.68             │
+│ 5  20 116 28   0 ││MagVar:                     ││Geoid:     43.4             │
+│ 6   5  62 23   0 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7  16 307 15   0 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8  18 163  3   0 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9 134   0  0   0 ││Sats: 21 29 26 25           ││MAJ:           MIN:         │
+│10 123   0  0   0 ││DOP: H=1.68  V=0.97  P=1.94 ││ORI:           LAT:         │
+│11  12 129  1   0 ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────
+
+          Cell 01 - Address: 50:87:89:C3:17:73
+                    Quality=40/70  Signal level=-70 dBm  
+                    ESSID:"\x00"
+          Cell 02 - Address: C4:6E:1F:B6:4D:2A
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Rep. Francaises"
+          Cell 03 - Address: 50:87:89:C3:17:70
+                    Quality=38/70  Signal level=-72 dBm  
+                    ESSID:"BG-Guest"
+          Cell 04 - Address: 50:87:89:C3:17:72
+                    Quality=38/70  Signal level=-72 dBm  
+                    ESSID:"\x00"
+          Cell 05 - Address: 58:B6:33:22:2C:38
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 06 - Address: 58:B6:33:22:25:18
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 07 - Address: 50:87:89:C3:17:71
+                    Quality=38/70  Signal level=-72 dBm  
+                    ESSID:"\x00"
+          Cell 08 - Address: A0:8D:16:36:77:28
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"3WebCube7724"
+          Cell 09 - Address: 58:B6:33:22:03:98
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 10 - Address: 58:B6:33:22:2B:98
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 11 - Address: 58:B6:33:22:58:18
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 12 - Address: 2C:C5:D3:10:9F:E8
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 13 - Address: 2C:C5:D3:50:9F:E8
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 14 - Address: 2C:C5:D3:90:9F:E8
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 15 - Address: C8:D7:19:5D:28:89
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"linksys"
+          Cell 16 - Address: 58:B6:33:22:33:08
+                    Quality=17/70  Signal level=-93 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 17 - Address: 2C:C5:D3:90:A6:A8
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"Caretta-Mitarbeiter"
+          Cell 18 - Address: 2C:C5:D3:10:A6:A8
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 19 - Address: 2C:C5:D3:50:A6:A8
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"Caretta-Gast"
+          Cell 20 - Address: 5C:49:79:83:DE:E4
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"Map Holding Office"
+          Cell 21 - Address: 58:B6:33:22:27:B8
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 22 - Address: C4:EA:1D:A5:BD:07
+                    Quality=15/70  Signal level=-95 dBm  
+                    ESSID:"A1-A5BD07"
+          Cell 23 - Address: 58:B6:33:22:03:58
+                    Quality=21/70  Signal level=-89 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 24 - Address: EC:1F:72:B7:D5:72
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"Doky1"
+          Cell 25 - Address: 2C:C5:D3:10:A7:58
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 26 - Address: 20:AA:4B:22:3A:2E
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"Freewave"
+          Cell 27 - Address: 2C:C5:D3:10:AB:B8
+                    Quality=21/70  Signal level=-89 dBm  
+                    ESSID:"Caretta-Plus"
+          Cell 28 - Address: 00:1D:2E:35:17:50
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:""
+          Cell 29 - Address: 58:B6:33:22:2E:78
+                    Quality=15/70  Signal level=-95 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 30 - Address: 58:B6:33:22:58:C8
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"IMPERIAL"
+          Cell 31 - Address: 58:B6:33:21:D7:68
+                    Quality=15/70  Signal level=-95 dBm  
+                    ESSID:"IMPERIAL"
+
+
+
+2a
+┌──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:27:01.000Z Lat:  48 12' 16.055" N Lon:  16 22' 10.175" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGGA GPGSA GPRMC GPZDA PMTK705 PMTK001 GPGSV                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      122701.000       ││Time:      122701.000       │
+│ 0  21 189 66  23 ││Latitude:     4812.2676 N   ││Latitude:  4812.2676        │
+│ 1  26 301 51  33 ││Longitude:   01622.1696 E   ││Longitude: 01622.1696       │
+│ 2  29  72 48  15 ││Speed:     0.55             ││Altitude:  380.7            │
+│ 3  31 231 35  29 ││Course:    34.97            ││Quality:   1   Sats: 04     │
+│ 4  20 109 33   0 ││Status:    A       FAA: A   ││HDOP:      1.86             │
+│ 5 120 219 26   0 ││MagVar:                     ││Geoid:     43.4             │
+│ 6  25 138 25   0 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7   5  54 22  15 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8  16 309 22  19 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  18 160 10   0 ││Sats: 26 21 29 5            ││MAJ:           MIN:         │
+│10  27 269  2   0 ││DOP: H=1.86  V=0.99  P=2.11 ││ORI:           LAT:         │
+│11                ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+
+pi@rabbit:~ $ sudo iwlist wlan0 scanning | egrep 'Cell|Quality|ESSID'
+          Cell 01 - Address: C8:51:95:A2:85:70
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"BTU_Guest"
+          Cell 02 - Address: FC:99:47:2B:4B:41
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Bitzinger-Gast"
+          Cell 03 - Address: FC:99:47:2B:4B:43
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"BAKc"
+          Cell 04 - Address: 52:4A:03:05:01:3E
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"WMK Hotspot"
+          Cell 05 - Address: DC:9F:DB:30:DE:A7
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:""
+          Cell 06 - Address: 00:23:69:8F:54:36
+                    Quality=39/70  Signal level=-71 dBm  
+                    ESSID:"Terminal"
+          Cell 07 - Address: 30:89:D3:5B:10:60
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"Roamingman_34114"
+          Cell 08 - Address: 40:B8:37:B9:43:51
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Xperia Z5 Dual_7c13"
+          Cell 09 - Address: 40:18:B1:59:14:57
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Albertina-Public"
+          Cell 10 - Address: 1C:AF:F7:43:CD:24
+                    Quality=43/70  Signal level=-67 dBm  
+                    ESSID:"beckermail"
+          Cell 11 - Address: BC:85:56:0D:4B:AE
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"HP-Print-ae-LaserJet 400 color"
+          Cell 12 - Address: BC:85:56:EE:06:87
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"HP-Print-87-LaserJet 400 MFP"
+          Cell 13 - Address: 46:E4:D8:DA:8D:A1
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"SETUP"
+
+
+2b
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:28:06.000Z Lat:  48 12' 14.928" N Lon:  16 22' 07.133" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGGA GPGSA GPRMC GPZDA PMTK705 PMTK001 GPGSV                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      122806.000       ││Time:      122806.000       │
+│ 0  21 188 66  30 ││Latitude:     4812.2488 N   ││Latitude:  4812.2488        │
+│ 1  26 301 51  22 ││Longitude:   01622.1189 E   ││Longitude: 01622.1189       │
+│ 2  29  73 47  12 ││Speed:     0.04             ││Altitude:  263.2            │
+│ 3  31 231 34  35 ││Course:    171.96           ││Quality:   1   Sats: 05     │
+│ 4  20 108 33   0 ││Status:    A       FAA: A   ││HDOP:      1.66             │
+│ 5  25 139 25   0 ││MagVar:                     ││Geoid:     43.4             │
+│ 6   5  53 22  18 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7  16 309 22  20 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8  18 159 10   0 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  27 269  3   0 ││Sats: 26 21 29 31 5         ││MAJ:           MIN:         │
+│10 132   0  0   0 ││DOP: H=1.66  V=0.93  P=1.90 ││ORI:           LAT:         │
+│11                ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+
+          Cell 01 - Address: C8:51:95:A2:85:70
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"BTU_Guest"
+          Cell 02 - Address: FC:99:47:2B:4B:41
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Bitzinger-Gast"
+          Cell 03 - Address: FC:99:47:2B:4B:43
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"BAKc"
+          Cell 04 - Address: 52:4A:03:05:01:3E
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"WMK Hotspot"
+          Cell 05 - Address: DC:9F:DB:30:DE:A7
+                    Quality=43/70  Signal level=-67 dBm  
+                    ESSID:""
+          Cell 06 - Address: 30:89:D3:5B:10:60
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"Roamingman_34114"
+          Cell 07 - Address: 1C:AF:F7:43:CD:24
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"beckermail"
+          Cell 08 - Address: CC:3E:5F:B1:0E:70
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Museen"
+          Cell 09 - Address: CC:3E:5F:B1:0E:71
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Museen_Gast"
+          Cell 10 - Address: 30:89:D3:47:B3:F0
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Roamingman_50594"
+          Cell 11 - Address: FC:99:47:2B:4B:42
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"\x00\x00\x00\x00\x00\x00\x00\x00"
+          Cell 12 - Address: FC:F5:28:CB:15:54
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Rutter"
+          Cell 13 - Address: 02:2E:FE:1D:4C:1D
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"HPCM1415-19ead7"
+          Cell 14 - Address: CC:3E:5F:B0:D1:31
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Museen_Gast"
+          Cell 15 - Address: CC:3E:5F:B0:D1:30
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Museen"
+          Cell 16 - Address: CC:3E:5F:B1:08:91
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Museen_Gast"
+          Cell 17 - Address: 14:58:D0:72:AC:30
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"wienatPublicWLAN"
+          Cell 18 - Address: 00:1E:E5:43:A2:62
+                    Quality=43/70  Signal level=-67 dBm  
+                    ESSID:"Freewave"
+          Cell 19 - Address: 62:4A:03:05:01:3E
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"WMK"
+          Cell 20 - Address: CC:5D:4E:EC:3A:5D
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"APRutter3"
+          Cell 21 - Address: CC:3E:5F:B0:FE:71
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Museen_Gast"
+
+2c
+┌──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:28:41.000Z Lat:  48 12' 14.346" N Lon:  16 22' 08.963" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGGA GPGSA GPRMC GPZDA PMTK705 PMTK001 GPGSV                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      122841.000       ││Time:      122841.000       │
+│ 0  21 188 66  22 ││Latitude:     4812.2391 N   ││Latitude:  4812.2391        │
+│ 1  26 301 52  25 ││Longitude:   01622.1494 E   ││Longitude: 01622.1494       │
+│ 2  29  73 47  13 ││Speed:     0.65             ││Altitude:  233.1            │
+│ 3  31 231 34  25 ││Course:    35.231           ││Quality:   1   Sats: 04     │
+│ 4  20 108 33   0 ││Status:    A       FAA: A   ││HDOP:      1.80             │
+│ 5 126 168 33   0 ││MagVar:                     ││Geoid:     43.4             │
+│ 6  25 139 25   0 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7  16 309 23  28 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8   5  53 22   0 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  18 159 10   0 ││Sats: 26 21 29 31           ││MAJ:           MIN:         │
+│10  27 270  3   0 ││DOP: H=1.80  V=0.97  P=2.05 ││ORI:           LAT:         │
+│11                ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+
+          Cell 01 - Address: FC:99:47:2B:4B:41
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Bitzinger-Gast"
+          Cell 02 - Address: FC:99:47:2B:4B:43
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"BAKc"
+          Cell 03 - Address: 30:89:D3:5B:10:60
+                    Quality=50/70  Signal level=-60 dBm  
+                    ESSID:"Roamingman_34114"
+          Cell 04 - Address: 1C:AF:F7:43:CD:24
+                    Quality=39/70  Signal level=-71 dBm  
+                    ESSID:"beckermail"
+          Cell 05 - Address: FC:99:47:2B:4B:42
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"\x00\x00\x00\x00\x00\x00\x00\x00"
+          Cell 06 - Address: FC:F5:28:CB:15:54
+                    Quality=38/70  Signal level=-72 dBm  
+                    ESSID:"Rutter"
+          Cell 07 - Address: 14:58:D0:72:AC:30
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"wienatPublicWLAN"
+          Cell 08 - Address: 00:1E:E5:43:A2:62
+                    Quality=58/70  Signal level=-52 dBm  
+                    ESSID:"Freewave"
+          Cell 09 - Address: 40:B8:37:B9:43:51
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"Xperia Z5 Dual_7c13"
+          Cell 10 - Address: 78:54:2E:2E:B9:92
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"Staatsoper"
+          Cell 11 - Address: CC:5D:4E:EC:3A:5B
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"APRutter4"
+          Cell 12 - Address: CC:3E:5F:B1:06:F1
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Museen_Gast"
+          Cell 13 - Address: 78:54:2E:2E:B9:90
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"stop-Netz"
+          Cell 14 - Address: E8:94:F6:DE:45:A6
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"HS"
+          Cell 15 - Address: 00:23:69:8F:54:36
+                    Quality=46/70  Signal level=-64 dBm  
+                    ESSID:"Terminal"
+          Cell 16 - Address: 04:18:D6:17:D4:41
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"Falstaff Verlag"
+          Cell 17 - Address: 78:54:2E:2E:B9:94
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Jazzfest"
+          Cell 18 - Address: 00:A0:57:18:C4:7E
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"SACHER"
+          Cell 19 - Address: CC:5D:4E:EC:3A:5D
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"APRutter3"
+          Cell 20 - Address: BC:85:56:EE:06:87
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"HP-Print-87-LaserJet 400 MFP"
+          Cell 21 - Address: FC:F5:28:CB:1C:34
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"Rutter"
+          Cell 22 - Address: 40:4A:03:04:FD:ED
+                    Quality=21/70  Signal level=-89 dBm  
+                    ESSID:"LAWTEG7"
+
+
+2d
+┌──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:29:25.000Z Lat:  48 12' 15.696" N Lon:  16 22' 08.550" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGGA GPGSA GPRMC GPZDA PMTK705 PMTK001 GPGSV                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      122925.000       ││Time:      122925.000       │
+│ 0  21 188 67  26 ││Latitude:     4812.2616 N   ││Latitude:  4812.2616        │
+│ 1  26 301 52  21 ││Longitude:   01622.1425 E   ││Longitude: 01622.1425       │
+│ 2  29  73 47  18 ││Speed:     1.14             ││Altitude:  214.7            │
+│ 3  31 230 34  36 ││Course:    239.24           ││Quality:   1   Sats: 06     │
+│ 4  20 108 34   0 ││Status:    A       FAA: A   ││HDOP:      1.18             │
+│ 5  25 139 24  17 ││MagVar:                     ││Geoid:     43.4             │
+│ 6  16 309 23  18 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7   5  53 22  15 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8  18 159 11   0 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  27 270  3   0 ││Sats: 26 21 25 29 31 5      ││MAJ:           MIN:         │
+│10 121   0  0   0 ││DOP: H=1.18  V=0.92  P=1.50 ││ORI:           LAT:         │
+│11                ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+
+          Cell 01 - Address: FC:99:47:2B:4B:41
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"Bitzinger-Gast"
+          Cell 02 - Address: FC:99:47:2B:4B:43
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"BAKc"
+          Cell 03 - Address: 1C:AF:F7:43:CD:24
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"beckermail"
+          Cell 04 - Address: FC:F5:28:CB:15:54
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"Rutter"
+          Cell 05 - Address: 00:1E:E5:43:A2:62
+                    Quality=47/70  Signal level=-63 dBm  
+                    ESSID:"Freewave"
+          Cell 06 - Address: CC:5D:4E:EC:3A:5B
+                    Quality=44/70  Signal level=-66 dBm  
+                    ESSID:"APRutter4"
+          Cell 07 - Address: CC:3E:5F:B1:06:F1
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"Museen_Gast"
+          Cell 08 - Address: E8:94:F6:DE:45:A6
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"HS"
+          Cell 09 - Address: 00:23:69:8F:54:36
+                    Quality=43/70  Signal level=-67 dBm  
+                    ESSID:"Terminal"
+          Cell 10 - Address: CC:5D:4E:EC:3A:5D
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"APRutter3"
+          Cell 11 - Address: BC:85:56:EE:06:87
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"HP-Print-87-LaserJet 400 MFP"
+          Cell 12 - Address: FC:F5:28:CB:1C:34
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Rutter"
+          Cell 13 - Address: 30:89:D3:47:B3:F0
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Roamingman_50594"
+          Cell 14 - Address: 00:1A:8C:7E:E1:6A
+                    Quality=41/70  Signal level=-69 dBm  
+                    ESSID:"Gast"
+          Cell 15 - Address: FC:F5:28:CB:1C:32
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Rutter"
+          Cell 16 - Address: 02:A0:57:18:C4:7E
+                    Quality=21/70  Signal level=-89 dBm  
+                    ESSID:"SAW-INT"
+          Cell 17 - Address: 02:2E:FE:1D:4C:1D
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"HPCM1415-19ead7"
+          Cell 18 - Address: 62:4A:03:05:01:3E
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"WMK"
+          Cell 19 - Address: 00:1B:2F:BC:5D:21
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Crestron_Marmorsaal"
+          Cell 20 - Address: CC:3E:5F:B0:D1:30
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Museen"
+          Cell 21 - Address: CC:3E:5F:B0:D1:31
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Museen_Gast"
+          Cell 22 - Address: 6C:99:89:B0:31:B0
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"BTV_KUNDE"
+          Cell 23 - Address: C0:C1:C0:36:7C:62
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"Freewave"
+          Cell 24 - Address: 00:1A:8C:7E:E1:6B
+                    Quality=43/70  Signal level=-67 dBm  
+                    ESSID:"FG8"
+          Cell 25 - Address: 30:89:D3:5B:10:60
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"Roamingman_34114"
+
+
+2e
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:30:09.000Z Lat:  48 12' 14.916" N Lon:  16 22' 10.440" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGGA GPGSA GPRMC GPZDA PMTK705 PMTK001 GPGSV                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      123009.000       ││Time:      123009.000       │
+│ 0  21 188 67  18 ││Latitude:     4812.2486 N   ││Latitude:  4812.2486        │
+│ 1  26 300 52  31 ││Longitude:   01622.1740 E   ││Longitude: 01622.1740       │
+│ 2  29  73 46  14 ││Speed:     1.15             ││Altitude:  203.1            │
+│ 3  20 107 34  28 ││Course:    77.432           ││Quality:   1   Sats: 05     │
+│ 4  31 230 33  25 ││Status:    A       FAA: A   ││HDOP:      1.41             │
+│ 5  25 139 24  17 ││MagVar:                     ││Geoid:     43.4             │
+│ 6  16 309 23  23 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7   5  53 22   0 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8  18 159 11   0 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  27 270  3   0 ││Sats: 26 21 25 29 31        ││MAJ:           MIN:         │
+│10 132   0  0   0 ││DOP: H=1.41  V=0.95  P=1.70 ││ORI:           LAT:         │
+│11                ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+
+          Cell 01 - Address: FC:99:47:2B:4B:43
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"BAKc"
+          Cell 02 - Address: 1C:AF:F7:43:CD:24
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"beckermail"
+          Cell 03 - Address: E8:94:F6:DE:45:A6
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"HS"
+          Cell 04 - Address: 00:23:69:8F:54:36
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"Terminal"
+          Cell 05 - Address: CC:5D:4E:EC:3A:5D
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"APRutter3"
+          Cell 06 - Address: 30:89:D3:47:B3:F0
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"Roamingman_50594"
+          Cell 07 - Address: 00:1A:8C:7E:E1:6A
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Gast"
+          Cell 08 - Address: C0:C1:C0:36:7C:62
+                    Quality=39/70  Signal level=-71 dBm  
+                    ESSID:"Freewave"
+          Cell 09 - Address: 00:1A:8C:7E:E1:6B
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"FG8"
+          Cell 10 - Address: 30:89:D3:5B:10:60
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"Roamingman_34114"
+          Cell 11 - Address: C8:51:95:98:89:04
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"WienkartE"
+          Cell 12 - Address: 80:B6:86:36:FB:43
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"OGV"
+          Cell 13 - Address: 52:4A:03:05:01:3E
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"WMK Hotspot"
+          Cell 14 - Address: EC:88:92:A8:62:36
+                    Quality=48/70  Signal level=-62 dBm  
+                    ESSID:"XT1068 7731"
+          Cell 15 - Address: FC:99:47:2B:4B:41
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Bitzinger-Gast"
+          Cell 16 - Address: CC:5D:4E:EC:3A:5B
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"APRutter4"
+          Cell 17 - Address: FC:F5:28:CB:1C:32
+                    Quality=21/70  Signal level=-89 dBm  
+                    ESSID:"Rutter"
+          Cell 18 - Address: 78:54:2E:2E:B9:92
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"Staatsoper"
+          Cell 19 - Address: BC:85:56:0D:4B:AE
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"HP-Print-ae-LaserJet 400 color"
+
+
+
+
+
+3a
+──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:34:26.000Z Lat:  48 12' 12.504" N Lon:  16 22' 10.115" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGSA GPRMC GPZDA GPGGA GPGSV                                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      123426.000       ││Time:      123426.000       │
+│ 0  21 186 69  32 ││Latitude:     4812.2084 N   ││Latitude:  4812.2084        │
+│ 1  26 299 54  15 ││Longitude:   01622.1686 E   ││Longitude: 01622.1686       │
+│ 2  29  75 45   0 ││Speed:     0.40             ││Altitude:  189.2            │
+│ 3  20 105 35  22 ││Course:    20.954           ││Quality:   1   Sats: 04     │
+│ 4  31 229 32  36 ││Status:    A       FAA: A   ││HDOP:      2.01             │
+│ 5 120 219 26  27 ││MagVar:                     ││Geoid:     43.4             │
+│ 6  16 309 25   0 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7  25 140 22  15 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8   5  51 21  13 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  18 158 13  24 ││Sats: 31 26 25 21           ││MAJ:           MIN:         │
+│10  27 271  5   0 ││DOP: H=2.01  V=0.95  P=2.23 ││ORI:           LAT:         │
+│11                ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+
+          Cell 01 - Address: A0:E4:CB:82:A2:B1
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"ZyXEL"
+          Cell 02 - Address: 08:5B:0E:1B:53:84
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"Gerstnerbusiness"
+          Cell 03 - Address: 98:FC:11:FC:61:DB
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Vto"
+          Cell 04 - Address: 9A:FC:11:FC:61:DC
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"Vto_Free"
+          Cell 05 - Address: 1C:18:4A:14:76:FC
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Bristol"
+          Cell 06 - Address: 78:54:2E:2E:CD:10
+                    Quality=38/70  Signal level=-72 dBm  
+                    ESSID:"stop-Netz"
+          Cell 07 - Address: 78:54:2E:2E:CD:11
+                    Quality=38/70  Signal level=-72 dBm  
+                    ESSID:"Theaterservice"
+          Cell 08 - Address: 78:54:2E:2E:CD:12
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"Staatsoper"
+          Cell 09 - Address: 78:54:2E:2E:CD:14
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"Jazzfest"
+          Cell 10 - Address: 92:E4:CB:82:A1:EF
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"Repeater"
+          Cell 11 - Address: C8:BE:19:90:68:10
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"stop-Netz"
+          Cell 12 - Address: C8:BE:19:90:68:11
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Theaterservice"
+          Cell 13 - Address: C8:BE:19:90:68:12
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Staatsoper"
+          Cell 14 - Address: 30:89:D3:64:71:B0
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"Roamingman_43597"
+          Cell 15 - Address: 1C:18:4A:14:77:1C
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"Bristol"
+          Cell 16 - Address: 9C:C7:A6:EB:73:30
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"Slowakei"
+          Cell 17 - Address: 1C:18:4A:14:78:94
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"Bristol"
+          Cell 18 - Address: 1A:5B:0E:1B:50:C4
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"kuk"
+          Cell 19 - Address: 1A:5B:0E:1B:53:84
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"kuk"
+          Cell 20 - Address: C8:BE:19:90:29:51
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Theaterservice"
+          Cell 21 - Address: A0:E4:CB:82:A1:EF
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"ZyXEL"
+          Cell 22 - Address: C8:BE:19:90:68:14
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Jazzfest"
+          Cell 23 - Address: AE:5F:3E:84:EE:FE
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"AndroidAP"
+          Cell 24 - Address: 1C:18:4A:14:79:00
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Bristol"
+          Cell 25 - Address: 1C:18:4A:14:77:0C
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Bristol"
+          Cell 26 - Address: A0:E4:CB:82:A2:AB
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"ZyXEL"
+          Cell 27 - Address: EC:1F:72:CB:9B:CA
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"AndroidAP"
+          Cell 28 - Address: 50:46:5D:01:CA:50
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"WLAN4US2"
+          Cell 29 - Address: C8:BE:19:90:29:54
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Jazzfest"
+          Cell 30 - Address: 1A:5B:0E:1B:69:34
+                    Quality=19/70  Signal level=-91 dBm  
+                    ESSID:"kuk"
+          Cell 31 - Address: C8:BE:19:90:29:50
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"stop-Netz"
+          Cell 32 - Address: 1C:18:4A:14:78:98
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Bristol"
+          Cell 33 - Address: B8:A3:86:FE:28:94
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Jazzfest"
+          Cell 34 - Address: B8:A3:86:FE:28:90
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"stop-Netz"
+          Cell 35 - Address: B8:A3:86:FE:28:91
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Theaterservice"
+          Cell 36 - Address: 1C:18:4A:14:78:CC
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Bristol"
+          Cell 37 - Address: 20:AA:4B:22:7F:3D
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"Freewave"
+
+3b
+──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:35:51.000Z Lat:  48 12' 10.625" N Lon:  16 22' 11.958" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGSA GPRMC GPZDA GPGGA GPGSV                                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      123551.000       ││Time:      123551.000       │
+│ 0  21 186 70  23 ││Latitude:     4812.1771 N   ││Latitude:  4812.1771        │
+│ 1  26 299 55  33 ││Longitude:   01622.1993 E   ││Longitude: 01622.1993       │
+│ 2  29  75 44  35 ││Speed:     0.38             ││Altitude:  131.5            │
+│ 3  20 105 35  18 ││Course:    11.451           ││Quality:   1   Sats: 06     │
+│ 4  31 228 31  32 ││Status:    A       FAA: A   ││HDOP:      1.25             │
+│ 5  16 309 26  17 ││MagVar:                     ││Geoid:     43.4             │
+│ 6  25 140 22  12 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7   5  50 21  13 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8  18 158 13  16 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  27 271  5   0 ││Sats: 31 5 26 25 21 29      ││MAJ:           MIN:         │
+│10 130   0  0   0 ││DOP: H=1.25  V=2.13  P=2.47 ││ORI:           LAT:         │
+│11                ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+
+          Cell 01 - Address: A0:E4:CB:82:A2:B1
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"ZyXEL"
+          Cell 02 - Address: 1C:18:4A:14:76:FC
+                    Quality=44/70  Signal level=-66 dBm  
+                    ESSID:"Bristol"
+          Cell 03 - Address: 78:54:2E:2E:CD:10
+                    Quality=42/70  Signal level=-68 dBm  
+                    ESSID:"stop-Netz"
+          Cell 04 - Address: 78:54:2E:2E:CD:11
+                    Quality=43/70  Signal level=-67 dBm  
+                    ESSID:"Theaterservice"
+          Cell 05 - Address: 78:54:2E:2E:CD:12
+                    Quality=44/70  Signal level=-66 dBm  
+                    ESSID:"Staatsoper"
+          Cell 06 - Address: 78:54:2E:2E:CD:14
+                    Quality=43/70  Signal level=-67 dBm  
+                    ESSID:"Jazzfest"
+          Cell 07 - Address: 30:89:D3:64:71:B0
+                    Quality=39/70  Signal level=-71 dBm  
+                    ESSID:"Roamingman_43597"
+          Cell 08 - Address: 1C:18:4A:14:77:1C
+                    Quality=40/70  Signal level=-70 dBm  
+                    ESSID:"Bristol"
+          Cell 09 - Address: 1C:18:4A:14:78:94
+                    Quality=45/70  Signal level=-65 dBm  
+                    ESSID:"Bristol"
+          Cell 10 - Address: C8:BE:19:90:29:54
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Jazzfest"
+          Cell 11 - Address: C8:BE:19:90:29:50
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"stop-Netz"
+          Cell 12 - Address: 1C:18:4A:14:74:30
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Bristol"
+          Cell 13 - Address: 54:78:1A:2E:46:E2
+                    Quality=41/70  Signal level=-69 dBm  
+                    ESSID:"SGA"
+          Cell 14 - Address: 54:78:1A:2E:46:E1
+                    Quality=42/70  Signal level=-68 dBm  
+                    ESSID:"Swarovski_Guest"
+          Cell 15 - Address: 56:D9:E7:6B:74:12
+                    Quality=40/70  Signal level=-70 dBm  
+                    ESSID:"3 Welcome fashiontvcafe"
+          Cell 16 - Address: 1C:18:4A:14:74:44
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"Bristol"
+          Cell 17 - Address: 48:C8:62:00:4D:68
+                    Quality=43/70  Signal level=-67 dBm  
+                    ESSID:"Skyroam_e3m"
+          Cell 18 - Address: A0:D3:C1:DE:07:BC
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"HP-Print-BC-Officejet Pro 8610"
+          Cell 19 - Address: 00:21:63:7C:2C:B5
+                    Quality=20/70  Signal level=-90 dBm  
+                    ESSID:"\x00\x00\x00\x00\x00\x00\x00"
+          Cell 20 - Address: 08:5B:0E:1B:69:34
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"Gerstnerbusiness"
+          Cell 21 - Address: 1A:4F:32:67:56:CD
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"DIRECT-cd-HP M452 LaserJet"
+          Cell 22 - Address: 54:78:1A:2E:46:E0
+                    Quality=41/70  Signal level=-69 dBm  
+                    ESSID:"SCB"
+          Cell 23 - Address: 52:D9:E7:6B:74:12
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"2 fcafe happy hour 4 to 8"
+          Cell 24 - Address: B8:A3:86:FE:28:92
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Staatsoper"
+          Cell 25 - Address: B8:A3:86:FE:28:94
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"Jazzfest"
+          Cell 26 - Address: C8:BE:19:90:29:51
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Theaterservice"
+          Cell 27 - Address: 1C:18:4A:14:78:CC
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Bristol"
+          Cell 28 - Address: 20:AA:4B:22:7F:3D
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"Freewave"
+          Cell 29 - Address: BE:F2:AF:AC:60:1D
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"Edelweiss-Guest"
+
+3c
+
+──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:36:56.000Z Lat:  48 12' 10.601" N Lon:  16 22' 11.099" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGSA GPRMC GPZDA GPGGA GPGSV                                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      123656.000       ││Time:      123656.000       │
+│ 0  21 186 70  33 ││Latitude:     4812.1767 N   ││Latitude:  4812.1767        │
+│ 1  26 298 55  30 ││Longitude:   01622.1850 E   ││Longitude: 01622.1850       │
+│ 2  29  75 44  27 ││Speed:     0.42             ││Altitude:  133.6            │
+│ 3  20 104 35  32 ││Course:    201.98           ││Quality:   1   Sats: 06     │
+│ 4  31 228 31  33 ││Status:    A       FAA: A   ││HDOP:      1.18             │
+│ 5  16 309 26  13 ││MagVar:                     ││Geoid:     43.4             │
+│ 6   5  50 21  19 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7  25 140 21  18 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8 131 122 17   0 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  18 158 14  23 ││Sats: 31 5 26 25 21 29      ││MAJ:           MIN:         │
+│10  27 272  6   0 ││DOP: H=1.18  V=0.90  P=1.49 ││ORI:           LAT:         │
+│11                ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+
+          Cell 01 - Address: 1C:18:4A:14:76:FC
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Bristol"
+          Cell 02 - Address: 78:54:2E:2E:CD:10
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"stop-Netz"
+          Cell 03 - Address: 78:54:2E:2E:CD:11
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Theaterservice"
+          Cell 04 - Address: 78:54:2E:2E:CD:12
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Staatsoper"
+          Cell 05 - Address: 78:54:2E:2E:CD:14
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Jazzfest"
+          Cell 06 - Address: 30:89:D3:64:71:B0
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Roamingman_43597"
+          Cell 07 - Address: 1C:18:4A:14:78:94
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Bristol"
+          Cell 08 - Address: 54:78:1A:2E:46:E2
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"SGA"
+          Cell 09 - Address: 54:78:1A:2E:46:E1
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Swarovski_Guest"
+          Cell 10 - Address: 54:78:1A:2E:46:E0
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"SCB"
+          Cell 11 - Address: 20:AA:4B:22:7F:3D
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"Freewave"
+          Cell 12 - Address: 9C:C7:A6:EB:73:30
+                    Quality=38/70  Signal level=-72 dBm  
+                    ESSID:"Slowakei"
+          Cell 13 - Address: 1C:18:4A:14:77:0C
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Bristol"
+          Cell 14 - Address: 1C:18:4A:14:80:DC
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"Bristol"
+          Cell 15 - Address: 50:46:5D:01:CA:50
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"WLAN4US2"
+          Cell 16 - Address: 92:E4:CB:82:A1:EF
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Repeater"
+          Cell 17 - Address: EC:1F:72:CB:9B:CA
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"AndroidAP"
+          Cell 18 - Address: AC:67:06:10:B0:60
+                    Quality=18/70  Signal level=-92 dBm  
+                    ESSID:""
+          Cell 19 - Address: 64:27:37:44:AB:06
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"HP-Print-06-LaserJet 400 MFP"
+          Cell 20 - Address: C8:51:95:A1:4A:3B
+                    Quality=18/70  Signal level=-92 dBm  
+                    ESSID:"TMOBILE-37202"
+          Cell 21 - Address: 64:7C:34:A8:72:2F
+                    Quality=17/70  Signal level=-93 dBm  
+                    ESSID:"UPC9825532"
+          Cell 22 - Address: AE:5F:3E:84:EE:FE
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"AndroidAP"
+          Cell 23 - Address: 1C:18:4A:14:77:00
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Bristol"
+pi@rabbit:~ $ sudo iwlist wlan0 scanning | egrep 'Cell|Quality|ESSID'
+          Cell 01 - Address: 1C:18:4A:14:76:FC
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"Bristol"
+          Cell 02 - Address: 78:54:2E:2E:CD:10
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"stop-Netz"
+          Cell 03 - Address: 78:54:2E:2E:CD:11
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Theaterservice"
+          Cell 04 - Address: 78:54:2E:2E:CD:12
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"Staatsoper"
+          Cell 05 - Address: 78:54:2E:2E:CD:14
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"Jazzfest"
+          Cell 06 - Address: 30:89:D3:64:71:B0
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Roamingman_43597"
+          Cell 07 - Address: 1C:18:4A:14:78:94
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Bristol"
+          Cell 08 - Address: 54:78:1A:2E:46:E2
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"SGA"
+          Cell 09 - Address: 54:78:1A:2E:46:E1
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Swarovski_Guest"
+          Cell 10 - Address: 54:78:1A:2E:46:E0
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"SCB"
+          Cell 11 - Address: 20:AA:4B:22:7F:3D
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"Freewave"
+          Cell 12 - Address: 9C:C7:A6:EB:73:30
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"Slowakei"
+          Cell 13 - Address: 1C:18:4A:14:77:0C
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Bristol"
+          Cell 14 - Address: 1C:18:4A:14:80:DC
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"Bristol"
+          Cell 15 - Address: 50:46:5D:01:CA:50
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"WLAN4US2"
+          Cell 16 - Address: 92:E4:CB:82:A1:EF
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Repeater"
+          Cell 17 - Address: EC:1F:72:CB:9B:CA
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"AndroidAP"
+          Cell 18 - Address: AC:67:06:10:B0:60
+                    Quality=18/70  Signal level=-92 dBm  
+                    ESSID:""
+          Cell 19 - Address: 64:27:37:44:AB:06
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"HP-Print-06-LaserJet 400 MFP"
+          Cell 20 - Address: C8:51:95:A1:4A:3B
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"TMOBILE-37202"
+          Cell 21 - Address: 64:7C:34:A8:72:2F
+                    Quality=17/70  Signal level=-93 dBm  
+                    ESSID:"UPC9825532"
+          Cell 22 - Address: AE:5F:3E:84:EE:FE
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"AndroidAP"
+          Cell 23 - Address: 1C:18:4A:14:77:00
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Bristol"
+          Cell 24 - Address: A0:E4:CB:82:A1:EF
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"ZyXEL"
+          Cell 25 - Address: D8:EB:97:BC:C0:DC
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"orderjet"
+          Cell 26 - Address: 1C:18:4A:11:42:50
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"Bristol"
+          Cell 27 - Address: A0:E4:CB:82:A2:B1
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"ZyXEL"
+          Cell 28 - Address: F0:99:BF:0E:0F:84
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"Grafik WLAN-Netzwerk"
+          Cell 29 - Address: 82:E4:CB:82:A1:EF
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"ZyXEL"
+          Cell 30 - Address: B8:A3:86:FE:28:91
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"Theaterservice"
+          Cell 31 - Address: B8:A3:86:FE:28:92
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Staatsoper"
+          Cell 32 - Address: B8:A3:86:FE:28:94
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Jazzfest"
+          Cell 33 - Address: B8:A3:86:FE:28:90
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"stop-Netz"
+
+3d
+──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:37:54.000Z Lat:  48 12' 09.342" N Lon:  16 22' 10.878" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGSA GPRMC GPZDA GPGGA GPGSV                                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      123754.000       ││Time:      123754.000       │
+│ 0  21 185 71  37 ││Latitude:     4812.1557 N   ││Latitude:  4812.1557        │
+│ 1  26 298 56  32 ││Longitude:   01622.1813 E   ││Longitude: 01622.1813       │
+│ 2  29  76 43  31 ││Speed:     0.70             ││Altitude:  142.8            │
+│ 3  20 103 36  23 ││Course:    136.39           ││Quality:   1   Sats: 06     │
+│ 4  31 227 30  35 ││Status:    A       FAA: A   ││HDOP:      1.18             │
+│ 5  16 309 27   0 ││MagVar:                     ││Geoid:     43.4             │
+│ 6   5  50 21  16 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7  25 141 21  24 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8  18 158 14  14 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  27 272  6   0 ││Sats: 31 5 26 25 21 29      ││MAJ:           MIN:         │
+│10 133   0  0   0 ││DOP: H=1.18  V=0.90  P=1.49 ││ORI:           LAT:         │
+│11                ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+          Cell 01 - Address: 1C:18:4A:14:76:FC
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Bristol"
+          Cell 02 - Address: 78:54:2E:2E:CD:10
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"stop-Netz"
+          Cell 03 - Address: 78:54:2E:2E:CD:11
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Theaterservice"
+          Cell 04 - Address: 78:54:2E:2E:CD:12
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Staatsoper"
+          Cell 05 - Address: 78:54:2E:2E:CD:14
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Jazzfest"
+          Cell 06 - Address: 20:AA:4B:22:7F:3D
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Freewave"
+          Cell 07 - Address: 50:46:5D:01:CA:50
+                    Quality=38/70  Signal level=-72 dBm  
+                    ESSID:"WLAN4US2"
+          Cell 08 - Address: 64:27:37:44:AB:06
+                    Quality=24/70  Signal level=-86 dBm  
+                    ESSID:"HP-Print-06-LaserJet 400 MFP"
+          Cell 09 - Address: D8:EB:97:BC:C0:DC
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"orderjet"
+          Cell 10 - Address: 82:E4:CB:82:A1:EF
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"ZyXEL"
+          Cell 11 - Address: B8:A3:86:FE:28:91
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"Theaterservice"
+          Cell 12 - Address: B8:A3:86:FE:28:90
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"stop-Netz"
+          Cell 13 - Address: 0C:96:BF:B8:93:EC
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"VPSC_WLAN"
+          Cell 14 - Address: C0:4A:00:47:02:2C
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"imbiss"
+          Cell 15 - Address: D8:EB:97:BC:C0:DD
+                    Quality=37/70  Signal level=-73 dBm  
+                    ESSID:"soprano"
+          Cell 16 - Address: A0:E4:CB:82:A2:AB
+                    Quality=22/70  Signal level=-88 dBm  
+                    ESSID:"ZyXEL"
+          Cell 17 - Address: A4:B1:E9:87:B0:79
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"A1-87B079"
+          Cell 18 - Address: 00:30:44:19:A6:53
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Vienna"
+          Cell 19 - Address: 64:7C:34:99:3C:92
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"UPC7198560"
+          Cell 20 - Address: 48:C8:62:00:94:0E
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"Skyroam_f1f"
+          Cell 21 - Address: 30:89:D3:3B:3A:70
+                    Quality=39/70  Signal level=-71 dBm  
+                    ESSID:"Roamingman_10566"
+          Cell 22 - Address: 06:7C:34:99:3C:92
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"UPC Wi-Free"
+          Cell 23 - Address: 0A:18:D6:0B:87:4F
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"Funknetz"
+          Cell 24 - Address: 0E:18:D6:0B:87:4F
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"Funkgast"
+          Cell 25 - Address: AE:5F:3E:84:EE:FE
+                    Quality=41/70  Signal level=-69 dBm  
+                    ESSID:"AndroidAP"
+          Cell 26 - Address: 00:1B:2F:59:0C:B4
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"drw1677a14"
+
+
+3e
+
+──────────────────────────────────────────────────────────────────────────────┐
+│Time: 2016-07-18T12:38:40.000Z Lat:  48 12' 09.893" N Lon:  16 22' 09.360" E  │
+└───────────────────────────────── Cooked PVT ─────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ GPGSA GPRMC GPZDA GPGGA GPGSV                                                │
+└───────────────────────────────── Sentences ──────────────────────────────────┘
+┌──────────────────┐┌────────────────────────────┐┌────────────────────────────┐
+│Ch PRN  Az El S/N ││Time:      123840.000       ││Time:      123840.000       │
+│ 0  21 185 71  33 ││Latitude:     4812.1649 N   ││Latitude:  4812.1649        │
+│ 1  26 298 56  16 ││Longitude:   01622.1560 E   ││Longitude: 01622.1560       │
+│ 2  29  76 43  26 ││Speed:     0.37             ││Altitude:  128.6            │
+│ 3  20 103 36  25 ││Course:    180.34           ││Quality:   1   Sats: 06     │
+│ 4  31 227 30  30 ││Status:    A       FAA: A   ││HDOP:      1.18             │
+│ 5  16 309 27   0 ││MagVar:                     ││Geoid:     43.4             │
+│ 6   5  49 21  28 │└─────────── RMC ────────────┘└─────────── GGA ────────────┘
+│ 7  25 141 21  30 │┌────────────────────────────┐┌────────────────────────────┐
+│ 8  18 158 14   0 ││Mode: A 3                   ││UTC:           RMS:         │
+│ 9  27 272  6   0 ││Sats: 31 5 26 25 21 29      ││MAJ:           MIN:         │
+│10 137   0  0   0 ││DOP: H=1.18  V=0.90  P=1.49 ││ORI:           LAT:         │
+│11                ││PPS offset:                 ││LON:           ALT:         │
+└────── GSV ───────┘└──────── GSA + PPS ─────────┘└─────────── GST ────────────┘
+
+          Cell 01 - Address: 78:54:2E:2E:CD:10
+                    Quality=27/70  Signal level=-83 dBm  
+                    ESSID:"stop-Netz"
+          Cell 02 - Address: 78:54:2E:2E:CD:11
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Theaterservice"
+          Cell 03 - Address: 78:54:2E:2E:CD:12
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Staatsoper"
+          Cell 04 - Address: 78:54:2E:2E:CD:14
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Jazzfest"
+          Cell 05 - Address: 50:46:5D:01:CA:50
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"WLAN4US2"
+          Cell 06 - Address: 0C:96:BF:B8:93:EC
+                    Quality=28/70  Signal level=-82 dBm  
+                    ESSID:"VPSC_WLAN"
+          Cell 07 - Address: 00:30:44:19:A6:53
+                    Quality=45/70  Signal level=-65 dBm  
+                    ESSID:"Vienna"
+          Cell 08 - Address: 48:C8:62:00:94:0E
+                    Quality=46/70  Signal level=-64 dBm  
+                    ESSID:"Skyroam_f1f"
+          Cell 09 - Address: 48:C6:82:01:0E:A9
+                    Quality=30/70  Signal level=-80 dBm  
+                    ESSID:"Skyroam_f8u"
+          Cell 10 - Address: 1C:18:4A:14:77:0C
+                    Quality=25/70  Signal level=-85 dBm  
+                    ESSID:"Bristol"
+          Cell 11 - Address: 00:30:44:16:F2:4F
+                    Quality=35/70  Signal level=-75 dBm  
+                    ESSID:"Vienna"
+          Cell 12 - Address: EC:0E:C4:1E:84:AE
+                    Quality=23/70  Signal level=-87 dBm  
+                    ESSID:"HP-Print-ae-LaserJet Pro MFP"
+          Cell 13 - Address: E8:DE:27:96:8B:74
+                    Quality=26/70  Signal level=-84 dBm  
+                    ESSID:"AEP"
+          Cell 14 - Address: C8:51:95:A1:4A:3B
+                    Quality=31/70  Signal level=-79 dBm  
+                    ESSID:"TMOBILE-37202"
+          Cell 15 - Address: C8:BE:19:90:68:10
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"stop-Netz"
+          Cell 16 - Address: C8:BE:19:90:68:11
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Theaterservice"
+          Cell 17 - Address: C8:BE:19:90:68:12
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Staatsoper"
+          Cell 18 - Address: C8:BE:19:90:68:14
+                    Quality=32/70  Signal level=-78 dBm  
+                    ESSID:"Jazzfest"
+          Cell 19 - Address: B8:A3:86:FE:28:94
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Jazzfest"
+          Cell 20 - Address: 38:22:9D:79:77:6A
+                    Quality=33/70  Signal level=-77 dBm  
+                    ESSID:"PBS-797765"
+          Cell 21 - Address: 9C:C7:A6:EB:73:30
+                    Quality=29/70  Signal level=-81 dBm  
+                    ESSID:"Slowakei"
+          Cell 22 - Address: C8:BE:19:90:29:50
+                    Quality=21/70  Signal level=-89 dBm  
+                    ESSID:"stop-Netz"
+          Cell 23 - Address: B8:A3:86:FE:28:90
+                    Quality=36/70  Signal level=-74 dBm  
+                    ESSID:"stop-Netz"
+          Cell 24 - Address: B8:A3:86:FE:28:91
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Theaterservice"
+          Cell 25 - Address: B8:A3:86:FE:28:92
+                    Quality=34/70  Signal level=-76 dBm  
+                    ESSID:"Staatsoper"
+
+
+
+4
+
+
+
+
+
+
+
+
+
+
+
+

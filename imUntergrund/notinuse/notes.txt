@@ -42,23 +42,6 @@ cgps -s
 
 
 
-xml parsers::
-elementtree https://docs.python.org/2/library/xml.etree.elementtree.html
-import xml.etree.ElementTree as ET
-tree = ET.parse('country_data.xml')
-root = tree.getroot()
-root = ET.fromstring(country_data_as_string)
-
-untangle xmltodict
-http://docs.python-guide.org/en/latest/scenarios/xml/
-
-beautifulsoup
-https://www.crummy.com/software/BeautifulSoup/
-
-
-
-
-
 
 
 
@@ -88,6 +71,12 @@ https://www.crummy.com/software/BeautifulSoup/
 
 
 network managers:
+import sys
+import os
+os.system('sudo ifconfig wlan0 up')
+os.system('sudo iwconfig wlan0 essid MY_ID key s:MY_PASS')
+os.system('sudo dhclient wlan0')
+
 
 wicd
 
@@ -97,7 +86,8 @@ nm-tool | grep "Freq.*Strength" | sed -ne "s|\(.*Strength \([0-9]\+\).*\)|\2}\1|
 
 iw-list scanning
 sudo iwlist wlan0 scanning | egrep 'Cell |Encryption|Quality|Last beacon|ESSID'
-
+sudo iwlist wlan0 scanning | egrep 'Cell|Quality|ESSID'
+sudo iwlist wlan0 scanning | egrep 'Quality|ESSID'
 sudo iwlist wlan0 scanning | egrep 'Address|Quality'
 
           Cell 01 - Address: 58:6D:8F:8E:E5:A0
@@ -127,3 +117,34 @@ sudo iwlist wlan0 scanning | egrep 'Address|Quality'
 58: 6D: 8F: 8E: E5: A0, -55; 
 
 
+
+
+      
+
+  """
+    def get_quality(cell):
+        quality = matching_line(cell,"Quality=").split()[0].split('/')
+        return str(int(round(float(quality[0]) / float(quality[1]) * 100))).rjust(3) + " %"
+
+    def get_channel(cell):
+        return matching_line(cell,"Channel:")
+  """
+
+
+
+  """
+  def get_encryption(cell):
+      enc=""
+      if matching_line(cell,"Encryption key:") == "off":
+          enc="Open"
+      else:
+          for line in cell:
+              matching = match(line,"IE:")
+              if matching!=None:
+                  wpa=match(matching,"WPA Version ")
+                  if wpa!=None:
+                      enc="WPA v."+wpa
+          if enc=="":
+              enc="WEP"
+      return enc
+"""

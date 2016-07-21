@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<data>
+    <location>
+        <id>1</id>
+        <name>basilik</name>
+        
+        <gpsX>48.209547</gpsX>
+        <gpsY>16.377466</gpsY>
+
+        <wifi>
+            <AP>
+                <address>C4:EA:1D:C4:4C:17</address>
+                <quality>40</quality>
+            </AP>
+        </wifi>
+
+        <LED></LED>
+        <radius>30</radius>
+        <state>
+            <id>a</id>
+            <activated>false</activated>
+            <audio>
+                <filename>basilisk.m4a</filename>
+            </audio>
+            <unlock>
+                <location>
+                    <id>2</id>
+                </location>
+                <location>
+                    <id>3</id>
+                </location>
+            </unlock>
+        </state>
+    </location>
+
+    <location>
+        <id>2</id>
+        <name>kugelGold</name>
+        
+        <gpsX>48.211617</gpsX>
+        <gpsY>16.368435</gpsY>
+
+        <wifi>
+            <AP>
+                <address>00:3A:99:8A:16:50</address>
+                <quality>30</quality>
+            </AP>
+        </wifi>
+
+        <LED></LED>
+        <radius>30</radius>
+        <state>
+            <id>a</id>
+            <activated>false</activated>
+            <unlock>
+                <location>
+                    <id>4</id>
+                </location>
+            </unlock>
+        </state>
+    </location>
+
+    <location>
+        <id>3</id>
+        <name>kugel2</name>
+        
+        <gpsX>48.211741</gpsX>
+        <gpsY>16.373456</gpsY>
+
+        <wifi>
+            <AP>
+                <address>EA:DE:27:65:85:5F</address>
+                <quality>40</quality>
+            </AP>
+        </wifi>
+
+        <LED></LED>
+        <radius>30</radius>
+        <state>
+            <id>a</id>
+            <activated>false</activated>
+            <unlock>
+                <location>
+                    <id>4</id>
+                </location>
+            </unlock>
+        </state>
+    </location>
+
+    <location>
+        <id>4</id>
+        <name>05</name>
+        
+        <gpsX>48.208643</gpsX>
+        <gpsY>16.372471</gpsY>
+
+        <wifi>
+            <AP>
+                <address>00:27:22:74:D2:8A</address>
+                <quality>50</quality>
+            </AP>
+        </wifi>
+
+        <LED></LED>
+        <radius>30</radius>
+        <state>
+            <id>a</id>
+            <activated>false</activated>
+            <audio>
+                <filename>05.m4a</filename>
+            </audio>
+            <unlock>
+                <location>
+                    <id>5</id>
+                </location>
+            </unlock>
+        </state>
+    </location>
+
+    <location>
+        <id>5</id>
+        <name>altwien</name>
+        
+        <gpsX>48.209196</gpsX>
+        <gpsY>16.375982</gpsY>
+
+        <wifi>
+            <AP>
+                <address>06:7C:34:A1:99:96</address>
+                <quality>40</quality>
+            </AP>
+        </wifi>
+
+        <LED></LED>
+        <radius>30</radius>
+        <state>
+            <id>a</id>
+            <activated>false</activated>
+            <audio>
+                <filename>cafealtwien.m4a</filename>
+            </audio>
+        </state>
+    </location>
+</data>
