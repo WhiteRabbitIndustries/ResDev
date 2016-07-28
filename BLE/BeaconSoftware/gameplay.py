@@ -12,6 +12,7 @@ import math
 from gpsClass import *
 from wifiPoller import *
 from gameObjectsClass import *
+from beaconPoller import *
 
 
 
@@ -37,6 +38,8 @@ print "entering main loop"
 
 gpsp = GpsPoller() #create threaded gps
 wifip = wifiPoller()
+beaconp = beaconPoller()
+
 try: 
   gpsp.start() #start watching gps values
   wifip.start()
@@ -61,9 +64,22 @@ try:
         distance = distance / 0.00001; #translate to meters
         print "Distance to %s is %d." % (gameData.locationList[x].name, distance)
 
+
+        inBoundBeacon = False
+
+        # get wifi aps for the location, then check if they are in bound
+        for a in xrange(0,len(gameData.locationList[x].beacons)):
+          #print "in scan", a
+
+          inBoundBeacon = inBoundBeacon or beaconp.inBeaconRange(gameData.locationList[x].beacons[a]['uuid'],gameData.locationList[x].beacons[a]['rssi'])
+          
+        print inBoundBeacon
+
+
         #calc in bound based on wifi ap signals
         inBoundWifi = False
         #print len(gameData.locationList[x].wifiAPs)
+        #
 
         # get wifi aps for the location, then check if they are in bound
         for a in xrange(0,len(gameData.locationList[x].wifiAPs)):
@@ -74,7 +90,7 @@ try:
         print inBoundWifi
 
 
-        if (distance<gameData.locationList[x].radius) | inBoundWifi :
+        if (distance<gameData.locationList[x].radius) | inBoundWifi | inBoundBeacon:
           # location check in: enter initial state, update prereq of other locaitons/states
           print "onlocation"
           #print "wifi strength: %d" % signalStrength
