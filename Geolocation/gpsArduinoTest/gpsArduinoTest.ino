@@ -2,7 +2,7 @@
 #include <SoftwareSerial.h>
 
 
-SoftwareSerial swSer(14, 12, false, 256);
+SoftwareSerial swSer(2, 3, false, 256);
 Adafruit_GPS GPS(&swSer);
 
 #define PMTK_SET_NMEA_OUTPUT_RMCGGA "$PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*28"
@@ -46,21 +46,21 @@ void loop() {
   if (timer > millis())  timer = millis();
 
   // approximately every 2 seconds or so, print out the current stats
-  if (millis() - timer > 2000) 
+  if (millis() - timer > 1000) 
   { 
     timer = millis(); // reset the timer
     
     //Serial.print("\nTime: ");
-//    Serial.print(GPS.hour, DEC); Serial.print(':');
-//    Serial.print(GPS.minute, DEC); Serial.print(':');
-//    Serial.print(GPS.seconds, DEC); Serial.print('.');
-//    Serial.println(GPS.milliseconds);
-//    Serial.print("Date: ");
-//    Serial.print(GPS.day, DEC); Serial.print('/');
-//    Serial.print(GPS.month, DEC); Serial.print("/20");
-//    Serial.println(GPS.year, DEC);
-//    Serial.print("Fix: "); Serial.print((int)GPS.fix);
-//    Serial.print(" quality: "); Serial.println((int)GPS.fixquality); 
+    Serial.print(GPS.hour, DEC); Serial.print(':');
+    Serial.print(GPS.minute, DEC); Serial.print(':');
+    Serial.print(GPS.seconds, DEC); Serial.print('.');
+    Serial.println(GPS.milliseconds);
+    Serial.print("Date: ");
+    Serial.print(GPS.day, DEC); Serial.print('/');
+    Serial.print(GPS.month, DEC); Serial.print("/20");
+    Serial.println(GPS.year, DEC);
+    Serial.print("Fix: "); Serial.print((int)GPS.fix);
+    Serial.print(" quality: "); Serial.println((int)GPS.fixquality); 
     
 //    if (GPS.fix) 
 //    {
