@@ -6,7 +6,7 @@
 #define PALETTE8  2
 #define TRUECOLOR 3
 
-#define NUM_LEDS 38
+#define NUM_LEDS 9
 
 // heart.gif ---------------------------------------------------------------
 

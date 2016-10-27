@@ -6,7 +6,7 @@
 #define PALETTE8  2
 #define TRUECOLOR 3
 
-#define NUM_LEDS 32
+#define NUM_LEDS 16
 
 // adafruit.gif ------------------------------------------------------------
 

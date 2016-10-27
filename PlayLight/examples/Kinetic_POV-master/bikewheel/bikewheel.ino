@@ -1,26 +1,21 @@
 /*------------------------------------------------------------------------
-  POV LED poi sketch.  Uses the following Adafruit parts (X2 for two poi):
+  POV LED bike wheel sketch.  Uses the following Adafruit parts:
 
-  - Trinket 5V (adafruit.com/product/1501) (NOT Pro Trinket or 3V Trinket)
-  - 150 mAh LiPoly battery (#1317)
-  - LiPoly backpack (#2124)
-  - Tiny SPDT slide switch (#805)
-  - 144 LED/m DotStar strip (#2328 or #2329) ONE is enough for four poi!
-  - Small tactile button (#1489) (optional) ONE is enough for 20 poi!
-
-  Use 'soda bottle preform' for enclosure w/5.25" (133 mm) inside depth.
-  3D-printable cap and insert can be downloaded from Thingiverse:
-  http://www.thingiverse.com/thing:918847
-  Add leash - e.g. paracord, or fancy ones available from flowtoys.com.
+  - Pro Trinket 5V (www.adafruit.com/product/2000)
+    (NOT Trinket or 3V Pro Trinket)
+  - Waterproof 3xAA battery holder with on/off switch (#771)
+  - 144 LED/m DotStar strip (#2328 or #2329) ONE is enough for
+    both sides of one bike wheel
+  - Tactile switch button (#1119) (optional)
 
   Needs Adafruit_DotStar library: github.com/adafruit/Adafruit_DotStar
+  
+  Full instructions: https://learn.adafruit.com/bike-wheel-pov-display
 
-  The poi project is designed around the Trinket board specifically for
-  its small size (Pro Trinket won't fit).  Throughout the code you'll see
-  mentions of other boards and extra features -- future projects might
-  adapt this code for larger spinnythings like clubs or staves -- but
-  for the poi, no, there's just no space inside the soda bottle preform,
-  it's Trinket only and just with the most basic features.
+  This project is based on Phil B's Genesis Poi:
+  learn.adafruit.com/genesis-poi-dotstar-led-persistence-of-vision-poi
+  and has been adapted to the Pro Trinket to accomodate more and larger
+  images than Trinket.
 
   Adafruit invests time and resources providing this open source code,
   please support Adafruit and open-source hardware by purchasing
@@ -35,7 +30,7 @@
 #include <Adafruit_DotStar.h>
 #include <avr/power.h>
 #include <avr/sleep.h>
- #include <SPI.h> // Enable this line on Pro Trinket
+#include <SPI.h> // Enable this line on Pro Trinket
 
 #ifdef __AVR_ATtiny85__
 typedef uint8_t  line_t; // Max 255 lines/image on Trinket
@@ -60,12 +55,12 @@ typedef uint16_t line_t; // Bigger images OK on other boards
 // Ideally you use hardware SPI as it's much faster, though limited to
 // specific pins.  If you really need to bitbang DotStar data & clock on
 // different pins, optionally define those here:
-#define LED_DATA_PIN  A4
-#define LED_CLOCK_PIN A5
+//#define LED_DATA_PIN  0
+//#define LED_CLOCK_PIN 1
 
 // Select from multiple images using tactile button (#1489) between pin and
 // ground.  Requires suitably-built graphics.h file w/more than one image.
-//#define SELECT_PIN 3
+#define SELECT_PIN 3
 
 // Optional feature -- not enabled here, no space -- a vibration switch
 // (aligned perpendicular to leash) is used as a poor man's accelerometer.
@@ -83,14 +78,16 @@ typedef uint16_t line_t; // Bigger images OK on other boards
 // be defined to use this (pointless without).
 //#define POWER_PIN 4
 
-#define SLEEP_TIME 2000  // Not-spinning time before sleep, in milliseconds
+#define SLEEP_TIME 2000   // Not-spinning time before sleep, in milliseconds
 
 // Empty and full thresholds (millivolts) used for battery level display:
-#define BATT_MIN_MV 3350 // Some headroom over battery cutoff near 2.9V
-#define BATT_MAX_MV 4000 // And little below fresh-charged battery near 4.1V
+#define BATT_MIN_MV 3350  // Some headroom over battery cutoff near 2.9V
+#define BATT_MAX_MV 4000  // And little below fresh-charged battery near 4.1V
+// These figures are based on LiPoly cell and will need to be tweaked for
+// 3X NiMH or alkaline batteries!
 
-boolean autoCycle = false; // Set to true to cycle images by default
-#define CYCLE_TIME 15      // Time, in seconds, between auto-cycle images
+boolean autoCycle = true; // Set to true to cycle images by default
+#define CYCLE_TIME 10     // Time, in seconds, between auto-cycle images
 
 // -------------------------------------------------------------------------
 
@@ -99,7 +96,7 @@ boolean autoCycle = false; // Set to true to cycle images by default
 Adafruit_DotStar strip = Adafruit_DotStar(NUM_LEDS,
   LED_DATA_PIN, LED_CLOCK_PIN, DOTSTAR_BRG);
 #else
-Adafruit_DotStar strip = Adafruit_DotStar(NUM_LEDS, DOTSTAR_BRG);
+Adafruit_DotStar strip = Adafruit_DotStar(NUM_LEDS, DOTSTAR_BGR);
 #endif
 
 void     imageInit(void);
@@ -191,7 +188,6 @@ void nextImage(void) {
 }
 
 // MAIN LOOP ---------------------------------------------------------------
-const int mapArray[] = {6,5,7,4,8,3,9,2,10,1,11,0,12,13,14};
 
 void loop() {
   uint32_t t = millis();               // Current time, milliseconds
@@ -225,7 +221,6 @@ void loop() {
   }
 #endif
 
-
   // Transfer one scanline from pixel data to LED strip:
 
   // If you're really pressed for graphics space and need just a few extra
@@ -243,7 +238,7 @@ void loop() {
         pixels = pgm_read_byte(ptr++);  // 8 pixels of data (pixel 0 = LSB)
         for(bitNum = 8; bitNum--; pixels >>= 1) {
           idx = pixels & 1; // Color table index for pixel (0 or 1)
-          strip.setPixelColor(mapArray[pixelNum++],
+          strip.setPixelColor(pixelNum++,
             palette[idx][0], palette[idx][1], palette[idx][2]);
         }
       }
@@ -257,41 +252,39 @@ void loop() {
         p2  = pgm_read_byte(ptr++); // Data for two pixels...
         p1  = p2 >> 4;              // Shift down 4 bits for first pixel
         p2 &= 0x0F;                 // Mask out low 4 bits for second pixel
-        strip.setPixelColor(mapArray[pixelNum++],
+        strip.setPixelColor(pixelNum++,
           palette[p1][0], palette[p1][1], palette[p1][2]);
-        strip.setPixelColor(mapArray[pixelNum++],
+        strip.setPixelColor(pixelNum++,
           palette[p2][0], palette[p2][1], palette[p2][2]);
       }
       break;
     }
 
-#if 0 // Yep, demo images need ALL THE SPACE (see comment above)
-//    case PALETTE8: { // 8-bit (256 color) PROGMEM-palette-based image
-//      uint16_t  o;
-//      uint8_t   pixelNum,
-//               *ptr = (uint8_t *)&imagePixels[imageLine * NUM_LEDS];
-//      for(pixelNum = 0; pixelNum < NUM_LEDS; pixelNum++) {
-//        o = pgm_read_byte(ptr++) * 3; // Offset into imagePalette
-//        strip.setPixelColor(pixelNum,
-//          pgm_read_byte(&imagePalette[o]),
-//          pgm_read_byte(&imagePalette[o + 1]),
-//          pgm_read_byte(&imagePalette[o + 2]));
-//      }
-//      break;
-//    }
-//
-//    case TRUECOLOR: { // 24-bit ('truecolor') image (no palette)
-//      uint8_t  pixelNum, r, g, b,
-//              *ptr = (uint8_t *)&imagePixels[imageLine * NUM_LEDS * 3];
-//      for(pixelNum = 0; pixelNum < NUM_LEDS; pixelNum++) {
-//        r = pgm_read_byte(ptr++);
-//        g = pgm_read_byte(ptr++);
-//        b = pgm_read_byte(ptr++);
-//        strip.setPixelColor(pixelNum, r, g, b);
-//      }
-//      break;
-//    }
-#endif
+    case PALETTE8: { // 8-bit (256 color) PROGMEM-palette-based image
+      uint16_t  o;
+      uint8_t   pixelNum,
+               *ptr = (uint8_t *)&imagePixels[imageLine * NUM_LEDS];
+      for(pixelNum = 0; pixelNum < NUM_LEDS; pixelNum++) {
+        o = pgm_read_byte(ptr++) * 3; // Offset into imagePalette
+        strip.setPixelColor(pixelNum,
+          pgm_read_byte(&imagePalette[o]),
+          pgm_read_byte(&imagePalette[o + 1]),
+          pgm_read_byte(&imagePalette[o + 2]));
+      }
+      break;
+    }
+
+    case TRUECOLOR: { // 24-bit ('truecolor') image (no palette)
+      uint8_t  pixelNum, r, g, b,
+              *ptr = (uint8_t *)&imagePixels[imageLine * NUM_LEDS * 3];
+      for(pixelNum = 0; pixelNum < NUM_LEDS; pixelNum++) {
+        r = pgm_read_byte(ptr++);
+        g = pgm_read_byte(ptr++);
+        b = pgm_read_byte(ptr++);
+        strip.setPixelColor(pixelNum, r, g, b);
+      }
+      break;
+    }
   }
 
   strip.show(); // Refresh LEDs

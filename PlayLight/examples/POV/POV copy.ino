@@ -1,10 +1,7 @@
-// Simple strand test for Adafruit Dot Star RGB LED strip.
-// This is a basic diagnostic tool, NOT a graphics demo...helps confirm
-// correct wiring and tests each pixel's ability to display red, green
-// and blue and to forward data down the line.  By limiting the number
-// and color of LEDs, it's reasonably safe to power a couple meters off
-// the Arduino's 5V pin.  DON'T try that with other code!
-#define DEBUG true
+
+
+
+#define DEBUG false
 
 
 #include <Adafruit_DotStar.h>
@@ -18,7 +15,7 @@ typedef uint8_t  line_t; // Max 255 lines/image on Trinket
 typedef uint16_t line_t; // Bigger images OK on other boards
 #endif
 
-#define NUMPIXELS 38 // Number of LEDs in strip
+#define NUMPIXELS 61 // Number of LEDs in strip
 
 
 //  0   1   2    3   4           15  16  17  18
@@ -62,8 +59,8 @@ int mappedPixelNum(int pixelNum)
 
 
 // Here's how to control the LEDs from any two pins:
-#define DATAPIN    A3
-#define CLOCKPIN   A2
+#define DATAPIN    11
+#define CLOCKPIN   13
 Adafruit_DotStar strip = Adafruit_DotStar(
   NUMPIXELS, DATAPIN, CLOCKPIN, DOTSTAR_BGR);
 // The last parameter is optional -- this is the color data order of the
@@ -201,10 +198,12 @@ void loop() {
     case TRUECOLOR: { // 24-bit ('truecolor') image (no palette)
       uint8_t  pixelNum, r, g, b,
               *ptr = (uint8_t *)&imagePixels[imageLine * NUM_LEDS * 3];
-      for(pixelNum = 0; pixelNum < NUM_LEDS; pixelNum++) {
+      for(pixelNum = 26; pixelNum < 26+17; pixelNum++) 
+      {
         r = pgm_read_byte(ptr++);
         g = pgm_read_byte(ptr++);
         b = pgm_read_byte(ptr++);
+        //strip.setPixelColor(mappedPixelNum(pixelNum), r, g, b);
         strip.setPixelColor(mappedPixelNum(pixelNum), r, g, b);
       }
       break;
@@ -213,7 +212,7 @@ void loop() {
 
   strip.show(); // Refresh LEDs
   if(++imageLine >= imageLines) imageLine = 0; // Next scanline, wrap around
-delayMicroseconds(3500);
+delayMicroseconds(500);
 
 
 
