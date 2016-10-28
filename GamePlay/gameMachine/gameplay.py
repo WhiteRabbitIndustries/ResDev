@@ -1,28 +1,32 @@
 #!/usr/bin/env python
     
-print "Welcome to imUntergrund!"
+
 
 # import libraries:     
 import time
 from time import sleep
-import serial
 import pygame
 import os
 import math
+import sys
+from gameObjectsClass import *
+sys.path.insert(0, 'GeoLocation/')
+#from geoloc import *
 from gpsClass import *
 from wifiPoller import *
-from gameObjectsClass import *
-
+from beaconPoller import *
 
 
 
 
 # import gameplay values from files: 
 #import xml for locations, audio files.
-gameData = GameData('gamedata.xml')
+gameData = GameData('../gameData.xml')
 
-#print "Game Location Count: "
-#print gameData.getLocationCount()
+print "Welcome to "
+print "Game Location Count: "
+print gameData.getLocationCount()
+
 
 pygame.mixer.init()
 # import state/level (so that)
@@ -37,9 +41,12 @@ print "entering main loop"
 
 gpsp = GpsPoller() #create threaded gps
 wifip = wifiPoller()
+beaconp = beaconPoller()
+
 try: 
   gpsp.start() #start watching gps values
-  wifip.start()
+  #wifip.start()
+  beaconp.start()
 
   while True:
     # get gps values
@@ -61,7 +68,19 @@ try:
         distance = distance / 0.00001; #translate to meters
         print "Distance to %s is %d." % (gameData.locationList[x].name, distance)
 
-        #calc in bound based on wifi ap signals
+
+        inBoundBeacon = False
+
+        # get wifi aps for the location, then check if they are in bound
+        for a in xrange(0,len(gameData.locationList[x].beacons)):
+          #print "in scan", a
+
+          inBoundBeacon = inBoundBeacon or beaconp.inBeaconRange(gameData.locationList[x].beacons[a]['uuid'],gameData.locationList[x].beacons[a]['rssi'])
+          
+        print inBoundBeacon
+
+
+        #WIFI Check
         inBoundWifi = False
         #print len(gameData.locationList[x].wifiAPs)
 
@@ -74,7 +93,7 @@ try:
         print inBoundWifi
 
 
-        if (distance<gameData.locationList[x].radius) | inBoundWifi :
+        if (distance<gameData.locationList[x].radius) | inBoundWifi | inBoundBeacon:
           # location check in: enter initial state, update prereq of other locaitons/states
           print "onlocation"
           #print "wifi strength: %d" % signalStrength

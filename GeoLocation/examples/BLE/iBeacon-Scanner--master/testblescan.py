@@ -4,7 +4,7 @@
 import blescan
 import sys
 
-import bluetooth._bluetooth as bluez
+import bluetooth as bluez
 
 dev_id = 0
 try:

@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <data>
+    <game>
+        <name>im Untergrund</name>
+        <folder>imUntergrund</folder>
+        <palette>0xFF0000</palette>
+    </game>
     <location>
         <id>1</id>
         <name>Hotel Imperial</name>
@@ -12,16 +17,11 @@
                 <address>58:B6:33:21:E5:48</address>
                 <quality>40</quality>
             </AP>
-            <AP>
-                <address>54:3D:37:34:36:88</address>
-                <quality>50</quality>
-            </AP>
         </wifi>
-
         <beacon>
-            <uuid>e2114c24954b0c960cff8c001d18e040</uuid>
-            <rss>-40</rss>
-        </beacon>
+ +            <uuid>11be1edda31a4ee6bd63a6d7f3f581af</uuid>
+ +            <rssi>-60</rssi>
+ +      </beacon>
 
         <LED></LED>
         <radius>30</radius>
@@ -82,12 +82,10 @@
                 <quality>50</quality>
             </AP>
         </wifi>
-
         <beacon>
-            <uuid>e2114c24924a0c960cff8c00aa33bd9f</uuid>
-            <rss>-40</rss>
-        </beacon>
-        
+ +            <uuid>e2114c24954b0c960cff8c001d18e040</uuid>
+ +            <rssi>-40</rssi>
+ +      </beacon>
         <LED></LED>
         <radius>50</radius>
         <state>

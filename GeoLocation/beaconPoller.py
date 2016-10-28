@@ -27,21 +27,27 @@ class beaconPoller(threading.Thread):
 
     except:
       print "error accessing bluetooth device..."
-          sys.exit(1)
+      sys.exit(1)
 
     blescan.hci_le_set_scan_parameters(self.sock)
     blescan.hci_enable_le_scan(self.sock)
 
 
+  def stop(self):
+    print "Beacons STOPPED"
+    self.running = False
+
   def run(self):
     try:
       while self.running:
-      
-        self.beaconsList = blescan.getBeacons(self.sock, 10)
 
-        #sort_cells(parsed_beacons)
-        #print_cells(self.parsed_beacons)
-        time.sleep(2) # tune this, you might not get values that quickly
+        if self.running is False:
+          print "Beacons stopped"
+          return
+        
+        self.beaconsList = blescan.getBeacons(self.sock, 10)
+        print "Beacons List: ", self.beaconsList  
+        time.sleep(1) # tune this, you might not get values that quickly
 
 
         #self.running = false;
@@ -51,14 +57,22 @@ class beaconPoller(threading.Thread):
   def inBeaconRange(self, uuid, rssi):
     try:
       # scan through 
-      print uuid 
   
+      print "Target UUID: ", uuid 
+      print "Target RSSI: ", rssi 
+      #c = 0
       for beacon in self.beaconsList:
-        
-        if beacon['uuid'] == uuid and beacon['rssi'] > rssi:
-          return True
-
-       return False
+        #print "beacon: ", c
+        #c=c+1
+        #print "UUID: ", beacon['uuid'] 
+        #print "RSSI: ", beacon['rssi'] 
+        if beacon['uuid'] == uuid: 
+          print "UUID: ", beacon['uuid']
+          print "RSSI: ", beacon['rssi']
+          if beacon['rssi'] > rssi:
+            return True
+      
+      return False
 
     except StopIteration:
       pass

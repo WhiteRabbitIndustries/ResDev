@@ -1,13 +1,20 @@
 #file  -- gameObjectsClass.py --
 import xml.etree.ElementTree as ET
 
-foldername = "audiofiles/"
+foldername = "../"
 
 class GameData:
+	
 	def __init__(self,xmlSource):
   		self.tree = ET.parse(xmlSource)
 		self.root = self.tree.getroot()
 		
+		for game in self.root.findall('game'):
+			global foldername
+			foldername += game.find('folder').text
+			foldername += "/data/"
+			print foldername
+
 		self.locationCount = 0
 		self.locationList = []	
 		for location in self.root.findall('location'):
@@ -18,10 +25,19 @@ class GameData:
 			wifiAPs = []
 			for AP in location.find('wifi').findall('AP'):
 				wifiAPs.append({'address': AP.find('address').text,'quality': int(AP.find('quality').text)})
-			
+
+			beacons = []
+			for beacon in location.findall('beacon'):
+				if(beacon is not None):
+					uuid = beacon.find('uuid').text
+					rssi = int(beacon.find('rssi').text)
+					print "UUID: ", uuid
+					print "Rssi: ", rssi
+					beacons.append({'uuid': uuid,'rssi': rssi})
+
 
 			radius = int(location.find('radius').text)        
-			self.locationList.append(GameLocation(id,name,coord,wifiAPs,radius,location))
+			self.locationList.append(GameLocation(id,name,coord,wifiAPs,radius,location,beacons))
 			self.locationCount+=1
 
 		#self.currentLocation = 1
@@ -32,12 +48,13 @@ class GameData:
 		pass
 
 class GameLocation:
-	def __init__(self,id,name,coord,wifiAPs,radius,location):
+	def __init__(self,id,name,coord,wifiAPs,radius,location, beacons):
 		self.id = id
 		self.name = name
 		self.coord = coord
 		self.wifiAPs = wifiAPs
 		self.radius = radius
+		self.beacons = beacons
 
 		#location conditions:
 		self.active = False
