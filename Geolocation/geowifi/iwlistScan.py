@@ -22,6 +22,7 @@ def get_quality(cell):
     return str(int(round(float(quality[0]) / float(quality[1]) * 100))).rjust(3) + " %"
 
 def get_channel(cell):
+    return matching_line(cell,"Channel:")
 
 def get_frequency(cell):
     frequency =  matching_line(cell,"Frequency:").split(" ")[0]
@@ -153,7 +154,7 @@ def main():
     cells=[[]]
     parsed_cells=[]
 
-    proc = subprocess.Popen(["iwlist", interface, "scan"],stdout=subprocess.PIPE, universal_newlines=True)
+    proc = subprocess.Popen(["/sbin/iwlist", interface, "scan"],stdout=subprocess.PIPE, universal_newlines=True)
     out, err = proc.communicate()
 
     for line in out.split("\n"):
