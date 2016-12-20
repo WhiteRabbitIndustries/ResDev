@@ -1,6 +1,8 @@
 # Playlight 
 
-
+'''
+Important note: When sending messages on I2c, always wait in between messages, otherwise teensy crashes... 
+'''
 
 
 #file  -- playlight.py --
@@ -55,17 +57,31 @@ def sendMessage(device, cmd, message):
 	bus.write_i2c_block_data(device, valCmd, valMessage)
 	
 
-  
+  ''' Demo Purposes
 
+import threading
+import smbus
+import time
+bus = smbus.SMBus(2)
+device = 0x09
 
+cmd = ""
+message = ""
 
+def StringToBytes(val):
+	retVal = []
+	for c in val:
+		retVal.append(ord(c))
+	return retVal
 
-
-
-
-
-
-	time.sleep(1)
+def sendMessage(device, cmd, message):
+	cmd=cmd.upper()
+	message = message.upper()
+	valCmd = ord(cmd)
+	valMessage  = StringToBytes(message)
+	print("Message: " + cmd + message + " send to device " + str(device))       
+	bus.write_i2c_block_data(device, valCmd, valMessage)
+	
 
 
 
@@ -97,18 +113,33 @@ sendMessage(device, "R","9")
 time.sleep(0.1)
 sendMessage(device, "R","10")
 
+
+
+sendMessage(device, "A","60")
+
 sendMessage(device, "R","60")
-
-
+sendMessage(device, "A","46")
+time.sleep(5)
+sendMessage(device, "R","46")
+sendMessage(device, "A","37")
+time.sleep(5)
+sendMessage(device, "R","37")
+sendMessage(device, "A","13")
+time.sleep(5)
+sendMessage(device, "R","13")
+sendMessage(device, "A","18")
+time.sleep(5)
+sendMessage(device, "R","18")
 
 for x in range(0, 24):
 	message = str(x)
 	sendMessage(device, "R",message)
 	time.sleep(0.05)
 
-for x in range(24, 42):
+for x in range(0, 61):
 	message = str(x)
 	sendMessage(device, "A",message)
+	time.sleep(0.1)
 
 for x in range(42, 60):
 	message = str(x)
@@ -127,6 +158,10 @@ for x in range(0, 61):
 for x in range(0, 61):
 	message = str(x)
 	sendMessage(device, "D",message)
-	time.sleep(0.05)
+	time.sleep(0.01)
+
+
+
+'''
 
 

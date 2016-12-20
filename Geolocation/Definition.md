@@ -46,6 +46,7 @@ Functions:
 - Return coordinates.
 - isInRadius(float radius, targetX, targetY)
 
+
 ## WIFI based recognition and positioning
 
 Required libraries?

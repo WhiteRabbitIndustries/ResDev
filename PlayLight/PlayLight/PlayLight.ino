@@ -3,6 +3,8 @@
  * Functions and classes for controlling hex matrix.
  */
 
+#define FASTLED_FORCE_SOFTWARE_SPI 1
+
 #define DEBUG true
 
 
@@ -28,7 +30,7 @@
 //#define DATA_PIN 11
 //#define CLOCK_PIN 13
 
-#define BRIGHTNESS  255
+#define BRIGHTNESS  127
 #define FRAMES_PER_SECOND 60
 
 CRGB leds[NUM_LEDS];
@@ -91,6 +93,7 @@ void setup()
 
 
   // LIGHT INIT
+  //FastLED.addLeds<CHIPSET, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
   FastLED.addLeds<CHIPSET, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
   FastLED.setBrightness( BRIGHTNESS );
 
@@ -150,7 +153,7 @@ void loop()
 void hexAnimate()
 {
   //locSpots
-  for (int i = 0; i < NUM_LEDS; i += )
+  for (int i = 0; i < NUM_LEDS; i++ )
   {
     if (i >= 0 && i < 24)
     {}

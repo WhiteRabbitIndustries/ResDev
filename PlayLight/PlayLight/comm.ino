@@ -18,6 +18,7 @@ void receiveEvent(int howMany)
   int incomingByte = 0;
   while (Wire.available()) // loop through all but the last
   {
+    Serial.println("receiving byte");
 
     incomingByte = Wire.read();
     if (incomingByte == 'I')
@@ -71,6 +72,7 @@ void receiveEvent(int howMany)
       int pixelNo = 0;
       while (Wire.available())
       {
+        Serial.println("receiving byte");
         incomingByte = Wire.read();
         if ((incomingByte >= '0') && (incomingByte <= '9'))
         {
@@ -92,6 +94,7 @@ void receiveEvent(int howMany)
       int pixelNo = 0;
       while (Wire.available())
       {
+        Serial.println("receiving byte");
         incomingByte = Wire.read();
         if ((incomingByte >= '0') && (incomingByte <= '9'))
         {
@@ -113,6 +116,7 @@ void receiveEvent(int howMany)
       int pixelNo = 0;
       while (Wire.available())
       {
+        Serial.println("receiving byte");
         incomingByte = Wire.read();
         if ((incomingByte >= '0') && (incomingByte <= '9'))
         {
