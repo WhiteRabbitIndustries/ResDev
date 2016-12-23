@@ -11,9 +11,13 @@ class WifiPoint:
   
 
 
-def Trilateration(pointA, pointB, pointC):
+def Trilateration(points):
 	#assuming elevation = 0
 	earthR = 6371
+
+	pointA = points[0]
+	pointB = points[1]
+	pointC = points[2]
 
 	#using authalic sphere
 	#if using an ellipsoid this step is slightly different
@@ -66,12 +70,12 @@ def Trilateration(pointA, pointB, pointC):
 	return currentPoint
 
 
+wifiPoints = []
+wifiPoints.append( WifiPoint(37.418436,-121.963477,0.265710701754) )
+wifiPoints.append( WifiPoint(37.417243,-121.961889,0.234592423446) )
+wifiPoints.append( WifiPoint(37.418692,-121.960194, 0.0548954278262) )
 
-pointA = WifiPoint(37.418436,-121.963477,0.265710701754)
-pointB = WifiPoint(37.417243,-121.961889,0.234592423446)
-pointC = WifiPoint(37.418692,-121.960194, 0.0548954278262)
 
-
-currentPoint = Trilateration(pointA, pointB, pointC)
+currentPoint = Trilateration(wifiPoints)
 
 print currentPoint.lat, currentPoint.lon, currentPoint.dist

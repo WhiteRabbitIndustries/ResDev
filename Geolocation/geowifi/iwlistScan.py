@@ -146,6 +146,7 @@ def print_cells(cells):
         for column in columns:
             cell_properties.append(cell[column])
         table.append(cell_properties)
+        print cell_properties
     print_table(table)
 
 def main():
