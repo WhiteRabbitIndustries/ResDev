@@ -20,7 +20,7 @@ class wifiPoller(threading.Thread):
     #self.parsed_cells=[]
     self.running = True     
     self.geoWifiDb = GeoWifiDB()
-    self.currentLocation = WirelessAccessPoint("MycurrentPosition", 0,0,0)
+    self.currentLocation =  {'x': 0, 'y': 0}
   
   def stop(self):
     print "Wifi STOPPED"
@@ -34,12 +34,14 @@ class wifiPoller(threading.Thread):
         for bssid, distance in bssids.items(): 
           print "BSIID: " + bssid + ", Distance: " + str(distance) + "m"
 
-        self.currentLocation = self.geoWifiDb.getCurrentLocation(bssids)
-        print self.currentLocation .bssid, self.currentLocation .lat, self.currentLocation .lon
+        wapLoc = self.geoWifiDb.getCurrentLocation(bssids)
+        self.currentLocation['x'] = wapLoc.lat
+        self.currentLocation['y'] = wapLoc.lon
+        print wapLoc.bssid, wapLoc.lat, wapLoc.lon
 
         #sort_cells(parsed_cells)
 
-        time.sleep(4) # tune this, you might not get values that quickly
+        time.sleep(2) # tune this, you might not get values that quickly
 
   def getCurrentLocation(self):
       return self.currentLocation
@@ -55,7 +57,7 @@ class wifiPoller(threading.Thread):
       proc = subprocess.Popen(command,stdout=subprocess.PIPE,  stderr=subprocess.PIPE, shell=False)
       #proc = subprocess.Popen(command,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
       #out = proc.stdout.read()
-      #proc.wait()
+      proc.wait()
       out, err = proc.communicate()
       #out = proc.stdout.read()
 
