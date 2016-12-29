@@ -5,13 +5,12 @@ import subprocess
 import time
 import math
 
+from GeoWifiDB import *
+
 
 interface = "wlan0"
 
 class wifiPoller(threading.Thread):
-
-  parsed_cells=[]
-  running = True
 
   # You can add or change the functions to parse the properties of each AP (cell)
   # below. They take one argument, the bunch of text describing one cell in iwlist
@@ -20,6 +19,8 @@ class wifiPoller(threading.Thread):
     threading.Thread.__init__(self)
     #self.parsed_cells=[]
     self.running = True     
+    self.geoWifiDb = GeoWifiDB()
+    self.currentLocation = WirelessAccessPoint("MycurrentPosition", 0,0,0)
   
   def stop(self):
     print "Wifi STOPPED"
@@ -28,29 +29,52 @@ class wifiPoller(threading.Thread):
   def run(self):
       
       while self.running: 
-        cells=[[]]
-        self.parsed_waps={}
+        
+        bssids = self.get_currentBssids()
+        for bssid, distance in bssids.items(): 
+          print "BSIID: " + bssid + ", Distance: " + str(distance) + "m"
 
-        proc = subprocess.Popen(["/sbin/iwlist", interface, "scan"],stdout=subprocess.PIPE, universal_newlines=True)
-        out, err = proc.communicate()
+        self.currentLocation = self.geoWifiDb.getCurrentLocation(bssids)
+        print self.currentLocation .bssid, self.currentLocation .lat, self.currentLocation .lon
 
-        for line in out.split("\n"):
-            cell_line = self.match(line,"Cell ")
-            if cell_line != None:
-                cells.append([])
-                line = cell_line[-27:]
-            cells[-1].append(line.rstrip())
-
-        cells=cells[1:]
-        #print cells
-
-        for cell in cells:
-            print "BSIID: " + self.get_name(cell) + "Distance: " + str(self.get_distance(cell)) + "m"
-            self.parsed_waps.update({self.get_name(cell):self.get_distance(cell)})
-            
         #sort_cells(parsed_cells)
 
-        time.sleep(2) # tune this, you might not get values that quickly
+        time.sleep(4) # tune this, you might not get values that quickly
+
+  def getCurrentLocation(self):
+      return self.currentLocation
+
+
+  def get_currentBssids(self):
+
+      cells=[[]]
+      parsed_waps={}
+      command = ["/sbin/iwlist", interface, "scanning"]
+
+      #proc = subprocess.Popen(command,stdout=subprocess.PIPE, universal_newlines=True)
+      proc = subprocess.Popen(command,stdout=subprocess.PIPE,  stderr=subprocess.PIPE, shell=False)
+      #proc = subprocess.Popen(command,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      #out = proc.stdout.read()
+      #proc.wait()
+      out, err = proc.communicate()
+      #out = proc.stdout.read()
+
+      for line in out.split("\n"):
+          cell_line = self.match(line,"Cell ")
+          #print line
+          if cell_line != None:
+              cells.append([])
+              line = cell_line[-27:]
+          cells[-1].append(line.rstrip())
+
+      cells=cells[1:]
+      #print cells
+
+      for cell in cells:
+          #print "BSIID: " + self.get_name(cell) + "Distance: " + str(self.get_distance(cell)) + "m"
+          parsed_waps.update({self.get_name(cell):self.get_distance(cell)})
+
+      return parsed_waps
 
 
   def get_name(self, cell):

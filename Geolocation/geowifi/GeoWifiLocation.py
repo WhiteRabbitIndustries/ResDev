@@ -11,19 +11,14 @@ def main(args):
 	wifip = wifiPoller()
 	threads.append(wifip)
 
-	wifip.start()
+	for t in threads:
+		t.daemon = True
+		t.start()
 
-	while len(threads) > 0:
-	    try:
-	        # Join all threads using a timeout so it doesn't block
-	        # Filter out threads which have been joined or are None
-	        threads = [t.join(1000) for t in threads if t is not None and t.isAlive()]
-	       	print "run"
-	        time.sleep(2)
-	    except KeyboardInterrupt:
-	        print "Ctrl-c received! Sending kill to threads..."
-	        for t in threads:
-	            t.running = False
+
+	while True:
+		print "Run"
+		time.sleep(2)
 
 
 if __name__ == '__main__':
