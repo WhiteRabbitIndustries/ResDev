@@ -4,6 +4,7 @@ import sqlite3
 import os.path
 import math
 import numpy
+import localization as lx
 
 
 
@@ -34,8 +35,8 @@ class GeoWifiDB:
 		
 	def initAttrtibutes(self):
 		self.csvDB = "wifi.csv"
-		self.croppedCsvDB = "dbWifiBilbao.csv"
-		self.sqliteDB = "dbWifiBilbao.db"
+		self.croppedCsvDB = "dbWifiMadrid.csv"
+		self.sqliteDB = "dbWifiMadrid.db"
 		self.coordinates = CroppingCoordinates(40.3176, 40.5493, -3.9015, -3.5088) #Madrid 
 		#coordinates = CroppingCoordinates(47.9743, 48.4420, 16.1629, 16.5818) #Vienna
 		#coordinates = CroppingCoordinates(52.3127, 52.7213, 12.8499, 13.9279) #Berlin 
@@ -165,7 +166,7 @@ class GeoWifiDB:
 			#print row
 
 			if row != None:	
-				wap = WirelessAccessPoint(row[0], row[1], row[2], distance)
+				wap = WirelessAccessPoint(row[0], row[1], row[2], distance/1000)
 				waps.append(wap)
 				print "WAP -> bssid: " + wap.bssid + ", lat: " + str(wap.lat) + ", lon: " + str(wap.lon) + ", distance: " + str(wap.dist)
 
@@ -174,8 +175,32 @@ class GeoWifiDB:
 
 
 	def getCurrentLocation(self, bssids):
-		wifiPoints = self.retrieveWAPs(bssids)
-		return self.trilateration(wifiPoints)
+		waps = self.retrieveWAPs(bssids)
+		return self.multilateration(waps)
+
+	def multilateration(self, waps):
+
+		if len(waps) < 3:
+			print "Multilateration:: Not enough data points -> " + str(len(waps))
+			return self.currentPosition
+
+		P=lx.Project(mode="Earth1",solver="LSE")
+
+		for wap in waps:
+			P.add_anchor(wap.bssid,(wap.lat, wap.lon))
+
+		t,label=P.add_target()
+
+		for wap in waps:
+			t.add_measure(wap.bssid,wap.dist)
+
+		P.solve()
+
+		self.currentPosition.lat = t.loc.x
+		self.currentPosition.lon = t.loc.y
+		return self.currentPosition
+
+
 
 	def trilateration(self, points):
 
@@ -184,12 +209,17 @@ class GeoWifiDB:
 			return self.currentPosition
 
 
-		#assuming elevation = 0
+		# assuming elevation = 0
+		# length unit : km
 		earthR = 6371
 
 		pointA = points[0]
 		pointB = points[1]
 		pointC = points[2]
+
+		print "pointA -> bssid: " + pointA.bssid + ", lat: " + str(pointA.lat) + ", lon: " + str(pointA.lon) + ", distance: " + str(pointA.dist)
+		print "pointB -> bssid: " + pointB.bssid + ", lat: " + str(pointB.lat) + ", lon: " + str(pointB.lon) + ", distance: " + str(pointB.dist)
+		print "pointC -> bssid: " + pointC.bssid + ", lat: " + str(pointC.lat) + ", lon: " + str(pointC.lon) + ", distance: " + str(pointC.dist)
 
 		#using authalic sphere
 		#if using an ellipsoid this step is slightly different

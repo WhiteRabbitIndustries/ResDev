@@ -32,7 +32,7 @@ class wifiPoller(threading.Thread):
         
         bssids = self.get_currentBssids()
         for bssid, distance in bssids.items(): 
-          print "BSIID: " + bssid + ", Distance: " + str(distance) + "m"
+          print "BSSID: " + bssid + ", Distance: " + str(distance) + "m"
 
         wapLoc = self.geoWifiDb.getCurrentLocation(bssids)
         self.currentLocation['x'] = wapLoc.lat
@@ -74,7 +74,8 @@ class wifiPoller(threading.Thread):
 
       for cell in cells:
           #print "BSIID: " + self.get_name(cell) + "Distance: " + str(self.get_distance(cell)) + "m"
-          parsed_waps.update({self.get_name(cell):self.get_distance(cell)})
+          parsed_waps.update({self.get_address(cell):self.get_distance(cell)})
+
 
       return parsed_waps
 
@@ -116,19 +117,7 @@ class wifiPoller(threading.Thread):
       corresponding dictionary"""
       parsed_wap={}
       parsed_cell.update({"Name":self.get_name(cell)})
-      parsed_cell.update({"Signal":self.get_signal_level(cell)})
-      parsed_cell.update({"Quality":self.get_quality(cell)})
-      parsed_cell.update({"Frequency":self.get_quality(cell)})
-      parsed_cell.update({"Distance":self.get_quality(cell)})
-
-      #print parsed_cell
-      return parsed_cell
-
-  def parse_cell(self,cell):
-      """Applies the rules to the bunch of text describing a cell and returns the
-      corresponding dictionary"""
-      parsed_cell={}
-      parsed_cell.update({"Name":self.get_name(cell)})
+      parsed_cell.update({"Address":self.get_address(cell)})
       parsed_cell.update({"Signal":self.get_signal_level(cell)})
       parsed_cell.update({"Quality":self.get_quality(cell)})
       parsed_cell.update({"Frequency":self.get_quality(cell)})
