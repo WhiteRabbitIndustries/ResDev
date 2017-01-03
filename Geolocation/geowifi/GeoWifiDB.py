@@ -34,19 +34,13 @@ class GeoWifiDB:
 		
 		
 	def initAttrtibutes(self):
-		self.csvDB = "wifi.csv"
-		self.croppedCsvDB = "dbWifiMadrid.csv"
-		self.sqliteDB = "dbWifiMadrid.db"
-		self.coordinates = CroppingCoordinates(40.3176, 40.5493, -3.9015, -3.5088) #Madrid 
-		#coordinates = CroppingCoordinates(47.9743, 48.4420, 16.1629, 16.5818) #Vienna
-		#coordinates = CroppingCoordinates(52.3127, 52.7213, 12.8499, 13.9279) #Berlin 
-		#self.croppedCsvDB = "dbBerlin.csv"
-		#self.sqliteDB = "dbBerlin.db" 
+		self.csvWaps = "waps.csv"
+		self.dbWaps = "waps.db"
+	
 		self.currentPosition = WirelessAccessPoint("MycurrentPosition", 0,0,0)
 
 	def loadDB(self):
 
-		self.cropCsvDataBase()
 		self.createSQLiteDatabase()
 
 
@@ -61,48 +55,6 @@ class GeoWifiDB:
 		bssid = bssid.upper()
 		return bssid
 
-	def cropCsvDataBase(self):
-
-		csv.register_dialect(
-	    'mydialect',
-	    delimiter = '\t',
-	    quotechar = '"',
-	    doublequote = True,
-	    skipinitialspace = True,
-	    lineterminator = '\r\n',
-	    quoting = csv.QUOTE_MINIMAL)
-
-
-		print "Cropping DB to " + self.croppedCsvDB
-
-		if not (os.path.exists(self.croppedCsvDB)):
-			f = open(self.croppedCsvDB, 'w')
-			thedatawriter = csv.writer(f, dialect='mydialect')
-
-			print "Cropping " + self.csvDB + " to " + self.croppedCsvDB
-
-			with open(self.csvDB , 'rb') as mycsvfile:
-			    datareader = csv.reader(mycsvfile, dialect='mydialect')
-			    #datareader.next() # skips the first (header) row
-
-			    for idx, row in enumerate(datareader):
-
-			    	if idx == 0:
-			    		print(row[0]+"\t \t"+row[1]+"\t \t"+row[2])
-			        	thedatawriter.writerow(row)
-			        else:
-
-			    		if coordinates.lat1 < float(row[1]) and coordinates.lat2 > float(row[1]) and coordinates.lon1 < float(row[2]) and coordinates.lon2 > float(row[2]):
-			        		print(row[0]+"\t \t"+row[1]+"\t \t"+row[2])
-			        		thedatawriter.writerow(row)
-			      
-
-			f.close()
-		
-		else:
-			print self.croppedCsvDB + " file already exit "
-
-
 	def createSQLiteDatabase(self):
 
 		csv.register_dialect(
@@ -114,14 +66,14 @@ class GeoWifiDB:
 	    lineterminator = '\r\n',
 	    quoting = csv.QUOTE_MINIMAL)
 		
-		conn = sqlite3.connect(self.sqliteDB)
+		conn = sqlite3.connect(self.dbWaps)
 		c = conn.cursor()
 
 		try:
 			c.execute('''CREATE TABLE bssids  (bssid text, lat real, lon real)''')
 
-			print "Creating " + self.sqliteDB + " Sqlite data base"
-			with open(self.croppedCsvDB, 'rb') as mycsvfile:
+			print "Creating " + self.dbWaps + " Sqlite data base"
+			with open(self.csvWaps, 'rb') as mycsvfile:
 			    datareader = csv.reader(mycsvfile, dialect='mydialect')
 			    #datareader.next() # skips the first (header) row
 
@@ -140,7 +92,7 @@ class GeoWifiDB:
 			c.execute(sql_index)
 			conn.close()
 		except: 
-		    print self.sqliteDB  + " Sqlite data base ALREADY EXISTS!"
+		    print self.dbWaps  + " Sqlite data base ALREADY EXISTS!"
 
 
 	def retrieveWAPs(self, bssids):
@@ -154,7 +106,7 @@ class GeoWifiDB:
 	    lineterminator = '\r\n',
 	    quoting = csv.QUOTE_MINIMAL)
 		
-		conn = sqlite3.connect(self.sqliteDB)
+		conn = sqlite3.connect(self.dbWaps)
 		c = conn.cursor()
 		waps = []
 
